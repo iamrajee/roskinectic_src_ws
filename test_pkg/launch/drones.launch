@@ -1,0 +1,10 @@
+<launch>
+  <!-- <group ns="drone1"> -->
+    <node pkg="test_pkg" name="drone1" type="drone1.py" output="screen"/>
+  <!-- </group> -->
+
+  <!-- <group ns="drone2"> -->
+    <node pkg="test_pkg" name="drone2" type="drone2.py" output="screen"/>
+  <!-- </group> -->
+
+</launch>

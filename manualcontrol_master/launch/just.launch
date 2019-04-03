@@ -1,0 +1,53 @@
+<launch>
+
+    <?ignore
+    <node pkg="manualcontrol_master" name="toggle_led" type="toggle_led.py"/>
+    ?>
+	
+    <node name="image_view_0" pkg="image_view" type="image_view" respawn="false" output="screen">
+        <remap from="image" to="camera0/usb_cam/image_raw"/>
+        <param name="autosize" value="false" />
+    </node>
+
+    <node name="image_view_1" pkg="image_view" type="image_view" respawn="false" output="screen">
+        <remap from="image" to="camera1/usb_cam/image_raw"/>
+        <param name="autosize" value="false" />
+    </node>
+
+
+    <node pkg="manualcontrol_master" name="face_recognition" type="face_recognition.py"/>
+    
+    <?ignore
+    <group ns="laptop">
+        <node pkg="audio_capture" name="turtlebot_teleop" type="turtlebot_teleop_key"/>
+    </group>
+    <arg name="device" default=""/>
+    <arg name="channels" default="1"/>
+    <arg name="sample_rate" default="16000"/>
+    <arg name="format" default="mp3"/>
+    <arg name="ns" default="audio"/>
+    <group ns="$(arg ns)">
+      <node name="audio_capture" pkg="audio_capture" type="audio_capture" output="screen">
+        <param name="bitrate" value="128"/>
+        <param name="device" value="$(arg device)"/>
+        <param name="channels" value="$(arg channels)"/>
+        <param name="sample_rate" value="$(arg sample_rate)"/>
+        <param name="format" value="$(arg format)"/>
+      </node>
+    </group>
+    ?>
+
+
+    <arg name="ns" default="audio"/>
+    <arg name="dst" default="alsasink"/>
+    <group ns="$(arg ns)">
+      <node name="audio_play" pkg="audio_play" type="audio_play" output="screen">
+        <param name="dst" value="$(arg dst)"/>
+      </node>
+    </group>
+
+    <group ns="teleop">
+        <node pkg="turtlebot_teleop" name="turtlebot_teleop" type="turtlebot_teleop_key"/>
+    </group>
+
+</launch>
