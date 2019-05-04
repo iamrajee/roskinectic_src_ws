@@ -1,0 +1,57 @@
+<launch>
+	<!-- Arguments for WhyCon node -->
+  <arg name="name" default="whycon"/>
+  <arg name="targets" default="3"/>
+  <arg name="outer_diameter" default=".55"/>
+  <arg name="inner_diameter" default=".20"/>
+
+  <!-- Arguments for ArUco node -->
+  <arg name="markerSize"      default="0.15"/>    <!-- in m -->
+  <arg name="side"             default="left"/>
+  <arg name="ref_frame"       default=""/>  <!-- leave empty and the pose will be published wrt param parent_name -->
+
+  <!-- Image_proc node for calibration of image to remove fish eye effect (required actually when we are using real camera) -->
+  <group ns="visionSensor">
+  	<node pkg="image_proc" type="image_proc" name="image_proc"/>
+  </group>
+
+  <!-- Running WhyCon node-->
+  <node name="whycon" type="whycon" pkg="whycon" output="screen">
+
+  	<!-- Setting the arguments recieved to the corresponding parameters -->
+    <param name="targets" value="$(arg targets)"/>
+    <param name="name" value="$(arg name)"/>
+    <param name="outer_diameter" value="$(arg outer_diameter)"/>
+    <param name="inner_diameter" value="$(arg inner_diameter)"/> 
+
+    <!-- Remap the topics to the corresponding topics -->
+    <remap from="/camera/camera_info" to="/visionSensor/camera_info"/>
+    <remap from="/camera/image_rect_color" to="/visionSensor/image_rect"/>
+
+  </node>
+
+  <!-- Running ArUco node -->
+  <node pkg="aruco_ros" type="marker_publisher" name="aruco_marker_publisher" output ="screen">
+  	<!-- Setting the arguments recieved to the corresponding parameters -->
+  	<param name="image_is_rectified" value="True"/>
+    <param name="marker_size"        value="$(arg markerSize)"/>
+    <param name="reference_frame"    value="$(arg ref_frame)"/> 
+    <param name="use_camera_info"    value="true"/> 
+
+    <!-- Remap the topics to the corresponding topics -->
+    <remap from="/camera_info" to="/visionSensor/camera_info" />
+    <remap from="/image" to="/visionSensor/image_rect" />
+  </node>
+
+  <!-- Running image_view node to display WhyCon output -->
+  <node ns = "whycon_display" name="image_view" type="image_view" pkg="image_view" output="screen">
+    <remap from="image" to="/whycon/image_out"/>
+  </node>
+
+  <!-- Running the image_view node to display ArUco marker output -->
+  <node ns = "aruco" name="image_view" type="image_view" pkg="image_view" output="screen">
+    <remap from="image" to="/aruco_marker_publisher/result"/>
+  </node>
+
+</launch>
+  
