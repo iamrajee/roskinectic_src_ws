@@ -1,0 +1,7 @@
+<launch>
+        <param name="robot_description" command="cat $(find r2d2)/model.xml" />
+
+        <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+        <node name="state_publisher" pkg="r2d2" type="state_publisher" />
+        
+</launch>
