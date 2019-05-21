@@ -1,0 +1,15 @@
+<launch>
+  <include file="$(find lidar)/launch/lidar.launch" />
+
+  <?ignore
+  <node pkg="tf" type="tf_remap" name="tf_remapper" output="screen">
+    <rosparam param="mappings">[{old: /laser, new: /base_scan}] </rosparam>
+  </node>
+  ?>
+
+  <node pkg="tf" type="static_transform_publisher" name="tf_publisher" args="0 0 2 0 0 0 1 /base_link /base_scan 100"/>
+ 
+  <?ignore
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find lidar)/rviz/tf_lidar.rviz" />
+  ?> 
+</launch>
