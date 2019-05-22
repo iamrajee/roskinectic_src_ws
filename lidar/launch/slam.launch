@@ -1,25 +1,26 @@
 <launch>
+
   <!-- Arguments -->
-  <arg name="model" default="burger"/>
   <arg name="configuration_basename" default="turtlebot3_lds_2d.lua"/>
 
   <!-- description -->
+  <arg name="model" default="burger"/>
   <param name="robot_description" command="$(find xacro)/xacro --inorder $(find lidar)/urdf/$(arg model).urdf.xacro" />
-  <arg name="multi_robot_name" default=""/>
+  
   <!-- Robot_state_pub -->
+  <arg name="multi_robot_name" default=""/>
   <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
     <param name="publish_frequency" type="double" value="50.0" />
     <param name="tf_prefix" value="$(arg multi_robot_name)"/>
   </node>
 
-
   <!-- lidar -->
   <include file="$(find lidar)/launch/lidar.launch" />
-  
+
+  <!-- gmapping -->
   <arg name="set_base_frame" default="base_footprint"/>
   <arg name="set_odom_frame" default="odom"/>
   <arg name="set_map_frame"  default="map"/>
-  <!-- gmapping -->
   <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" output="screen">
     <param name="base_frame" value="$(arg set_base_frame)"/>
     <param name="odom_frame" value="$(arg set_odom_frame)"/>

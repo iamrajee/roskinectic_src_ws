@@ -1,13 +1,13 @@
 <launch>
+
   <!-- Arguments -->
   <arg name="scan_topic"     default="scan"/>
   <arg name="initial_pose_x" default="0.0"/>
   <arg name="initial_pose_y" default="0.0"/>
   <arg name="initial_pose_a" default="0.0"/>
-
+  
   <!-- AMCL -->
   <node pkg="amcl" type="amcl" name="amcl">
-
     <param name="min_particles"             value="500"/>
     <param name="max_particles"             value="3000"/>
     <param name="kld_err"                   value="0.02"/>
@@ -41,6 +41,6 @@
     <param name="odom_alpha4"               value="0.1"/>
     <param name="odom_frame_id"             value="odom"/>
     <param name="base_frame_id"             value="base_footprint"/>
-
   </node>
+
 </launch>
