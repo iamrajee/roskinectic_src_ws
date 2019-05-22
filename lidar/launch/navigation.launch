@@ -1,12 +1,12 @@
 <launch>
 
+  <include file="$(find lidar)/launch/world.launch"/>
+
   <!-- Arguments -->
   <arg name="model" default="burger"/>
   <arg name="move_forward_only" default="false"/>
 
-  
-  
-  <!-- description -->
+  <!-- robot_description -->
   <param name="robot_description" command="$(find xacro)/xacro --inorder $(find lidar)/urdf/$(arg model).urdf.xacro" />
 
   <!-- Robot_state_pub -->
