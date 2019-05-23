@@ -3,5 +3,7 @@
 
         <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
         <node name="state_publisher" pkg="r2d2" type="state_publisher" />
+
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find r2d2)/rviz/display.rviz" />
         
 </launch>
