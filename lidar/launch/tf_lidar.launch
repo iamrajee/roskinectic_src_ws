@@ -1,4 +1,5 @@
 <launch>
+
   <include file="$(find lidar)/launch/lidar.launch" />
 
   <?ignore
@@ -12,4 +13,5 @@
   <?ignore
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find lidar)/rviz/tf_lidar.rviz" />
   ?> 
+
 </launch>
