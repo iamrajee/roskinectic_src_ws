@@ -1,25 +1,25 @@
 <launch>
-
+  <!-- ============================= WORLD ============================ -->
   <include file="$(find lidar)/launch/world.launch"/>
-
-  <!-- Arguments -->
+  <?ignore
+  <!-- ============================ Arguments ========================== -->
   <arg name="configuration_basename" default="turtlebot3_lds_2d.lua"/>
-
-  <!-- robot_description -->
+  ?>
+  <!-- ========================= robot_description ===================== -->
   <arg name="model" default="burger"/>
   <param name="robot_description" command="$(find xacro)/xacro --inorder $(find lidar)/urdf/$(arg model).urdf.xacro" />
 
-  <!-- Robot_state_pub -->
+  <!-- ========================= Robot_state_pub ======================== -->
   <arg name="multi_robot_name" default=""/>
   <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
     <param name="publish_frequency" type="double" value="50.0" />
     <param name="tf_prefix" value="$(arg multi_robot_name)"/>
   </node>
 
-  <!-- lidar -->
+  <!-- ============================= lidar ================================ -->
   <include file="$(find lidar)/launch/lidar.launch" />
 
-  <!-- gmapping -->
+  <!-- ============================= gmapping ============================== -->
   <arg name="set_base_frame" default="base_footprint"/>
   <arg name="set_odom_frame" default="odom"/>
   <arg name="set_map_frame"  default="map"/>
@@ -58,7 +58,7 @@
     <param name="lasamplestep" value="0.005"/>
   </node>
 
-  <!-- rviz -->
+  <!-- ====================================== rviz ============================ -->
   <node pkg="rviz" type="rviz" name="rviz" required="true" args="-d $(find lidar)/rviz/gmapping.rviz"/>
 
 </launch>

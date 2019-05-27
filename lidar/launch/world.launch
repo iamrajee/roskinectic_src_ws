@@ -1,14 +1,16 @@
 <launch>
 
+  <!--  ========================== gazebo and gazebo_gui ================== -->
   <include file="$(find lidar)/launch/empty_world.launch">
     <arg name="world_name" value="$(find lidar)/worlds/world.world"/>
     <arg name="paused" value="false"/>
     <arg name="use_sim_time" value="true"/>
-    <arg name="gui" value="false"/>
+    <arg name="gui" value="true"/>
     <arg name="headless" value="false"/>
     <arg name="debug" value="false"/>
   </include>
 
+  <!--  ========================== spawm_model ================== -->
   <arg name="model" default="burger"/>
   <arg name="x_pos" default="-2.0"/>
   <arg name="y_pos" default="-0.5"/>
