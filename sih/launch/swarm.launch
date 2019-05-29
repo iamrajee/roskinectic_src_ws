@@ -1,0 +1,6 @@
+<launch>
+
+  <node name="plutoswarm2" type="plutoswarm2" pkg="plutodrone"/>
+  <node name="key_command" type="key_command.py" pkg="plutoserver"/>
+
+</launch>

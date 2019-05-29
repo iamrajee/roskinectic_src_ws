@@ -1,0 +1,21 @@
+<launch>
+    
+    <include file="$(find sih)/launch/detect_aruco.launch"/>  
+  
+    <include file="$(find sih)/launch/swarm.launch"/>
+
+    <!-- <node name="key_command" type="key_command.py" pkg="plutoserver"   ns="drone0">
+        <param name="ns" value="drone0"/>
+    </node>
+
+	<group ns="drone0">
+        <node name="key_command" type="key_command.py" pkg="plutoserver" args="/input_key:=/drone0/input_key"/>
+        <node name="drone_server" type="key_handling.py" pkg="plutoserver"  args="/drone_command:=/drone0/drone_command">
+            <remap from="/input_key" to="/drone0/input_key"/>
+        </node>
+        <node name="plutonode" type="plutonode" pkg="plutodrone">
+            <remap from="/drone_command" to="/drone0/drone_command"/>
+        </node>
+    </group> -->
+
+</launch>

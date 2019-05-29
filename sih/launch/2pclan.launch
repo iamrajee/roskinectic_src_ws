@@ -1,0 +1,14 @@
+<launch>
+
+	<arg name="n" default="0"/>
+    <group ns="drone$(arg n)">
+        <node name="key_command" type="key_command.py" pkg="plutoserver" args="/input_key:=/drone$(arg n)/input_key"/>
+		<node name="drone_server" type="key_handling.py" pkg="plutoserver"  args="/drone_command:=/drone$(arg n)/drone_command">
+            <remap from="/input_key" to="/drone$(arg n)/input_key"/>
+	    </node>
+		<node name="plutonode" type="plutonode" pkg="plutodrone">
+			<remap from="/drone_command" to="/drone$(arg n)/drone_command"/>
+	    </node>
+    </group>
+
+</launch>

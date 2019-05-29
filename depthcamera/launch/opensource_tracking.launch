@@ -3,6 +3,7 @@
     <include unless="$(arg offline)" 
         file="$(find depthcamera)/launch/rs_camera.launch">
         <arg name="align_depth" value="true"/>
+	<arg name="enable_infra2" value="false"/>
         <arg name="linear_accel_cov" value="1.0"/>
         <arg name="unite_imu_method" value="linear_interpolation"/>
     </include>
