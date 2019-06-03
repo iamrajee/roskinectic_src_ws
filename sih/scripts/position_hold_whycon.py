@@ -30,19 +30,22 @@ class position_hold():
 		self.zero_line_value = 0.0  #?
 		# [x,y,z,yaw_value]
 		self.droneAruco_pos = [0.0,0.0,0.0,0.0]	
-		self.setpoint = [-0.75, 0.25, 1.225, 0.018] #goal
+		self.setpoint = [5.68, -1.91, 33.40, 0.0] #goal
+
 		#[pitch, roll, throttle, yaw]
 		self.output = [0.0, 0.0, 0.0, 0.0]
 		self.prev_values = [0,0,0,0]
 		self.max_values = [1700,1700,1800,1800]
 		self.min_values = [1300,1300,1200,1200]
-		self.Kp = [5.13, 12, 23.1, 9] 
-		self.Ki = [0.8 , 0, 0, 0.1496]
-		self.Kd = [13.365, 58.5, 342.9, 112.83]
+		self.Kp = [0.006*1015,214*0.06,203*0.06,0.006*310]#[5.13, 12, 23.1, 9]
+		self.Ki = [0.008*0,43*0.008,0.0,0.0008*96]#[0.8 , 0, 0, 0.1496]
+		self.Kd = [0.003*0,118*0.0375,1795*0.3,0.03*2100]#[13.365, 58.5, 342.9, 112.83]
 
 		self.proposnal = [0.0, 0.0, 0.0, 0.0]
-		self.integral = [0.0, 0.0, 0.0, 0.0]
+		self.iterm = [0.0, 0.0, 0.0, 0.0]
+		# self.sum_of_error = [0.0, 0.0, 0.0, 0.0]
 		self.differential = [0.0, 0.0, 0.0, 0.0]
+
 
 		# ================== Publisher =========================#
 		self.drone_command_pub = rospy.Publisher('/drone_command', PlutoMsg, queue_size=5)
@@ -70,17 +73,18 @@ class position_hold():
 		self.differential = [0.0, 0.0, 0.0, 0.0] #reset to 0
 		for i in range (0, 4):
 			self.proposnal[i] = self.setpoint[i] - self.droneAruco_pos[i]
-			self.integral[i] = self.integral[i] + self.proposnal[i]
+			# self.sum_of_error[i] = self.sum_of_error[i] + self.proposnal[i]
+			self.iterm[i] = self.Ki[i]*(self.iterm[i] + self.proposnal[i])
 			self.differential[i] = self.proposnal[i] - self.prev_values[i]
-			self.output[i] = (self.Kp[i] * self.proposnal[i]) + (self.Ki[i] * self.integral[i]) + (self.Kd[i] * self.differential[i])
+			self.output[i] = (self.Kp[i] * self.proposnal[i]) + self.iterm[i] + (self.Kd[i] * self.differential[i])
 			self.prev_values[i] = self.proposnal[i]
 
 			self.error_pub[i].publish(self.proposnal[i])
 
-		self.cmd.rcPitch = 		1500 #- self.output[0]
-		self.cmd.rcRoll = 		1500 #- self.output[1]
-		self.cmd.rcThrottle = 	1500 #- self.output[2]
-		self.cmd.rcYaw = 		1500 #+ self.output[3]
+		self.cmd.rcPitch = 		1500 - self.output[0] #(+ve) want to decre.
+		self.cmd.rcRoll = 		1500 - self.output[1] #(-ve) want to incre.
+		self.cmd.rcThrottle = 	1500 - self.output[2] #(-ve) want to incre.
+		self.cmd.rcYaw = 		1500 + self.output[3]
 
 		self.limit()
 

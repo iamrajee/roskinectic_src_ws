@@ -3,7 +3,7 @@
     <include file="$(find sih)/launch/detect_whycon.launch"/>
     <!-- <include file="$(find sih)/launch/swarm.launch"/> -->
     <!-- <include file="$(find sih)/launch/drone.launch"/> -->
-    <node pkg="sih" type="position_hold_whycon.py" name="position_hold" />
+    <!-- <node pkg="sih" type="position_hold_whycon.py" name="position_hold" /> -->
 
     <!-- <node name="pid_plot" pkg="rqt_plot" type="rqt_plot"
         args="/pitch_error/data /roll_error/data /yaw_error/data /alt_error/data" /> -->

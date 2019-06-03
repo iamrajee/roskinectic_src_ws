@@ -1,24 +1,5 @@
 #!/usr/bin/env python
-
-'''
-
-This python file runs a ROS-node of name drone_control which holds the position of e-Drone on the given dummy.
-This node publishes and subsribes the following topics:
-
-        PUBLICATIONS            SUBSCRIPTIONS
-        /drone_command          /whycon/poses
-        /alt_error              /pid_tuning_altitude
-        /pitch_error            /pid_tuning_pitch
-        /roll_error             /pid_tuning_roll
-        /yaw_error              /pid_tuning_yaw
-                                /drone_yaw
-
-Rather than using different variables, use list. eg : self.setpoint = [1,2,3,4], where index corresponds to x,y,z and yaw_value...rather than defining self.x_setpoint = 1, self.y_setpoint = 2
-CODE MODULARITY AND TECHNIQUES MENTIONED LIKE THIS WILL HELP YOU GAINING MORE MARKS WHILE CODE EVALUATION.  
-'''
-
 # Importing the required libraries
-
 from plutodrone.msg import *
 from geometry_msgs.msg import PoseArray
 from std_msgs.msg import Int16
@@ -29,13 +10,9 @@ from std_msgs.msg import String
 import rospy
 import time
 
-
 class Edrone():
-    """docstring for Edrone"""
     def __init__(self):
-        
         rospy.init_node('drone_control')    # initializing ros node with name drone_control
-
         # This corresponds to your current position of drone. This value must be updated each time in your whycon callback
         # [x,y,z,yaw_value]
         self.drone_position = [0.0,0.0,0.0,0.0] 
