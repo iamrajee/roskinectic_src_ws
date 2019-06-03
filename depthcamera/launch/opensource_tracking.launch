@@ -1,13 +1,15 @@
 <launch>
+    <!-- ==================== rs_camera ======================= -->
     <arg name="offline"          default="false"/>
-    <include unless="$(arg offline)" 
+    <include unless="$(arg offline)"
         file="$(find depthcamera)/launch/rs_camera.launch">
         <arg name="align_depth" value="true"/>
-	<arg name="enable_infra2" value="false"/>
+	    <arg name="enable_infra2" value="false"/>
         <arg name="linear_accel_cov" value="1.0"/>
         <arg name="unite_imu_method" value="linear_interpolation"/>
     </include>
     
+    <!-- ===================== imu_filter ========================= -->
     <node pkg="imu_filter_madgwick" type="imu_filter_node" name="ImuFilter">
         <param name="_use_ma" type="bool" value="false" />
         <param name="_publish_tf" type="bool" value="false" />
@@ -15,6 +17,7 @@
         <remap from="/imu/data_raw" to="/camera/imu"/>
     </node>
 
+    <!-- ============================ rtabmap ============================= -->
     <include file="$(find depthcamera)/launch/rtabmap.launch">
         <arg name="args" value="--delete_db_on_start"/>
         <arg name="rgb_topic" value="/camera/color/image_raw"/>
@@ -25,7 +28,10 @@
         <arg name="rviz" value="true"/>
     </include>
 
+    <!-- ======================== localization ============================ -->
     <include file="$(find robot_localization)/launch/ukf_template.launch"/>
+
+    <!-- ======================= param and rosparam ======================== -->
     <param name="/ukf_se/frequency" value="300"/>
     <param name="/ukf_se/base_link_frame" value="camera_link"/>
     <param name="/ukf_se/odom0" value="rtabmap/odom"/>
@@ -38,7 +44,6 @@
     <param name="/ukf_se/odom0_relative" value="true"/>
     <param name="/ukf_se/odom0_pose_rejection_threshold" value="10000000"/>
     <param name="/ukf_se/odom0_twist_rejection_threshold" value="10000000"/>
-
     <param name="/ukf_se/imu0" value="/imu/data"/>
     <rosparam param="/ukf_se/imu0_config">[false, false, false,
                                            true,  true,  true,
