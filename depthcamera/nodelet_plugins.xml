@@ -1,48 +1,48 @@
 <library path="lib/librtabmap_ros"> 
 
   <class name="rtabmap_ros/rtabmap" 
-         type="rtabmap_ros::CoreWrapper" 
-         base_class_type="nodelet::Nodelet">
+    type="rtabmap_ros::CoreWrapper" 
+    base_class_type="nodelet::Nodelet">
     <description>
       This is my nodelet.
     </description>
   </class>
 
-  <class name="rtabmap_ros/rgbd_odometry" 
-         type="rtabmap_ros::RGBDOdometry" 
-         base_class_type="nodelet::Nodelet">
+  <class name="rtabmap_ros/rgbd_odometry"
+    type="rtabmap_ros::RGBDOdometry"
+    base_class_type="nodelet::Nodelet">
     <description>
       This is my nodelet.
     </description>
   </class>
   
   <class name="rtabmap_ros/stereo_odometry" 
-         type="rtabmap_ros::StereoOdometry" 
-         base_class_type="nodelet::Nodelet">
+    type="rtabmap_ros::StereoOdometry" 
+    base_class_type="nodelet::Nodelet">
     <description>
       This is my nodelet.
     </description>
   </class>
   
   <class name="rtabmap_ros/rgbdicp_odometry" 
-         type="rtabmap_ros::RGBDICPOdometry" 
-         base_class_type="nodelet::Nodelet">
+    type="rtabmap_ros::RGBDICPOdometry" 
+    base_class_type="nodelet::Nodelet">
     <description>
       This is my nodelet.
     </description>
   </class>
   
   <class name="rtabmap_ros/icp_odometry" 
-         type="rtabmap_ros::ICPOdometry" 
-         base_class_type="nodelet::Nodelet">
+    type="rtabmap_ros::ICPOdometry" 
+    base_class_type="nodelet::Nodelet">
     <description>
       This is my nodelet.
     </description>
   </class>
 
   <class name="rtabmap_ros/data_throttle" 
-         type="rtabmap_ros::DataThrottleNodelet" 
-         base_class_type="nodelet::Nodelet">
+    type="rtabmap_ros::DataThrottleNodelet" 
+    base_class_type="nodelet::Nodelet">
     <description>
       This is my nodelet.
     </description>

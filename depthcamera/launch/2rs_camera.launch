@@ -1,41 +1,41 @@
 <launch>
-  <arg name="serial_no"           default=""/>
+  <arg name="serial_no"           default="819112071996"/>
   <arg name="json_file_path"      default=""/>
   <arg name="camera"              default="camera"/>
   <arg name="tf_prefix"           default="$(arg camera)"/>
 
-  <arg name="fisheye_width"       default="640"/>
-  <arg name="fisheye_height"      default="480"/>
-  <arg name="enable_fisheye"      default="true"/>
-
-  <arg name="depth_width"         default="640"/>
-  <arg name="depth_height"        default="480"/>
-  <arg name="enable_depth"        default="true"/>
-
-  <arg name="infra_width"        default="640"/>
-  <arg name="infra_height"       default="480"/>
-  <arg name="enable_infra1"       default="true"/>
-  <arg name="enable_infra2"       default="true"/>
-
-  <arg name="color_width"         default="640"/>
-  <arg name="color_height"        default="480"/>
   <arg name="enable_color"        default="true"/>
-
-  <arg name="fisheye_fps"         default="15"/>
-  <arg name="depth_fps"           default="15"/>
-  <arg name="infra_fps"           default="15"/>
-  <arg name="color_fps"           default="15"/>
-  <arg name="gyro_fps"            default="400"/>
-  <arg name="accel_fps"           default="250"/>
-  <arg name="enable_gyro"         default="true"/>
-  <arg name="enable_accel"        default="true"/>
-
-  <arg name="enable_pointcloud"         default="false"/>
-  <arg name="pointcloud_texture_stream" default="RS2_STREAM_COLOR"/>
-  <arg name="pointcloud_texture_index"  default="0"/>
-
+  <arg name="enable_depth"        default="true"/>
+  <arg name="enable_infra1"       default="false"/>
+  <arg name="enable_infra2"       default="false"/>
+  <arg name="enable_fisheye"      default="false"/>
+  <arg name="enable_gyro"         default="false"/>
+  <arg name="enable_accel"        default="false"/>
+  <arg name="enable_pointcloud"         default="true"/>
   <arg name="enable_sync"               default="false"/>
   <arg name="align_depth"               default="false"/>
+
+  <arg name="w" default="480"/>
+  <arg name="h" default="270"/>
+  <arg name="fisheye_width"       default="$(arg w)"/>
+  <arg name="fisheye_height"      default="$(arg h)"/>
+  <arg name="depth_width"         default="$(arg w)"/>
+  <arg name="depth_height"        default="$(arg h)"/>
+  <arg name="infra_width"        default="$(arg w)"/>
+  <arg name="infra_height"       default="$(arg h)"/>
+  <arg name="color_width"         default="424"/> <!-- 480x270 not supported for color-->
+  <arg name="color_height"        default="240"/>
+
+  <arg name="color_fps"           default="15"/>
+  <arg name="depth_fps"           default="15"/>
+  <arg name="infra_fps"           default="15"/>
+  <arg name="fisheye_fps"         default="15"/>
+  <arg name="gyro_fps"            default="400"/>
+  <arg name="accel_fps"           default="250"/>
+
+  <!-- <arg name="enable_pointcloud"         default="true"/> -->
+  <arg name="pointcloud_texture_stream" default="RS2_STREAM_COLOR"/>
+  <arg name="pointcloud_texture_index"  default="0"/>
 
   <arg name="filters"                   default=""/>
   <arg name="clip_distance"             default="-2"/>
@@ -46,7 +46,6 @@
   <arg name="calib_odom_file"           default=""/>
   <arg name="publish_odom_tf"           default="true"/>
   <arg name="allow_no_texture_points"   default="false"/>
-
   
   <group ns="$(arg camera)">
     <include file="$(find depthcamera)/launch/includes/nodelet.launch.xml">
@@ -97,4 +96,7 @@
       <arg name="allow_no_texture_points"  value="$(arg allow_no_texture_points)"/>
     </include>
   </group>
+
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find depthcamera)/rviz/2rs_camera.rviz"/>
+
 </launch>
