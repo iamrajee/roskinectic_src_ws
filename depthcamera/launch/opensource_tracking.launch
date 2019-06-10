@@ -1,14 +1,29 @@
 <launch>
+
+    <!-- <param name="/use_sim_time" value="true"/> -->
+
     <!-- ==================== rs_camera ======================= -->
     <arg name="offline"          default="false"/>
     <include unless="$(arg offline)"
-        file="$(find depthcamera)/launch/rs_camera.launch">
-        <arg name="align_depth" value="true"/>
-	    <arg name="enable_infra2" value="false"/>
+        file="$(find depthcamera)/launch/2rs_camera.launch">
+        <arg name="align_depth" value="true"/> -->
         <arg name="linear_accel_cov" value="1.0"/>
-        <arg name="unite_imu_method" value="linear_interpolation"/>
+	    <!-- <arg name="enable_infra2" value="false"/> -->                     <!-- already false -->
+        <!-- <arg name="unite_imu_method" value="linear_interpolation"/> --> <!-- imu not working -->
     </include>
-    
+
+    <!-- ============================ rtabmap ============================= -->
+    <include file="$(find depthcamera)/launch/rtabmap.launch">
+        <arg name="args" value="--delete_db_on_start"/>
+        <arg name="rgb_topic" value="/camera/color/image_raw"/>
+        <arg name="depth_topic" value="/camera/aligned_depth_to_color/image_raw"/>
+        <arg name="camera_info_topic" value="/camera/color/camera_info"/>
+        <arg name="depth_camera_info_topic" value="/camera/depth/camera_info"/> <!-- not used anywhere -->
+        <arg name="rtabmapviz" value="false"/>
+        <arg name="rviz" value="true"/>
+    </include>
+
+    <?ignore
     <!-- ===================== imu_filter ========================= -->
     <node pkg="imu_filter_madgwick" type="imu_filter_node" name="ImuFilter">
         <param name="_use_ma" type="bool" value="false" />
@@ -17,21 +32,7 @@
         <remap from="/imu/data_raw" to="/camera/imu"/>
     </node>
 
-    <!-- ============================ rtabmap ============================= -->
-    <include file="$(find depthcamera)/launch/rtabmap.launch">
-        <arg name="args" value="--delete_db_on_start"/>
-        <arg name="rgb_topic" value="/camera/color/image_raw"/>
-        <arg name="depth_topic" value="/camera/aligned_depth_to_color/image_raw"/>
-        <arg name="camera_info_topic" value="/camera/color/camera_info"/>
-        <arg name="depth_camera_info_topic" value="/camera/depth/camera_info"/>
-        <arg name="rtabmapviz" value="false"/>
-        <arg name="rviz" value="true"/>
-    </include>
-
-    <!-- ======================== localization ============================ -->
-    <include file="$(find robot_localization)/launch/ukf_template.launch"/>
-
-    <!-- ======================= param and rosparam ======================== -->
+    <!-- ======================== robot localization ============================ -->
     <param name="/ukf_se/frequency" value="300"/>
     <param name="/ukf_se/base_link_frame" value="camera_link"/>
     <param name="/ukf_se/odom0" value="rtabmap/odom"/>
@@ -55,4 +56,6 @@
     <param name="/ukf_se/imu0_relative" value="false"/>
     <param name="/ukf_se/use_control" value="false"/>
     <!-- <param name="/ukf_se/odom0_config" value="{true,true,true,}"/> -->
+    <include file="$(find robot_localization)/launch/ukf_template.launch"/>
+    ?>
 </launch>

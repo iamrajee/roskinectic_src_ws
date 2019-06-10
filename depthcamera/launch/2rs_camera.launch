@@ -11,9 +11,9 @@
   <arg name="enable_fisheye"      default="false"/>
   <arg name="enable_gyro"         default="false"/>
   <arg name="enable_accel"        default="false"/>
-  <arg name="enable_pointcloud"         default="true"/>
-  <arg name="enable_sync"               default="false"/>
-  <arg name="align_depth"               default="false"/>
+  <arg name="enable_pointcloud"   default="false"/>
+  <arg name="enable_sync"         default="false"/>
+  <arg name="align_depth"         default="false"/>
 
   <arg name="w" default="480"/>
   <arg name="h" default="270"/>
@@ -41,7 +41,7 @@
   <arg name="clip_distance"             default="-2"/>
   <arg name="linear_accel_cov"          default="0.01"/>
   <arg name="initial_reset"             default="false"/>
-  <arg name="unite_imu_method"          default=""/>
+  <arg name="unite_imu_method"          default=""/> <!-- "linear_interpolation","copy","" -->
   <arg name="topic_odom_in"             default="odom_in"/>
   <arg name="calib_odom_file"           default=""/>
   <arg name="publish_odom_tf"           default="true"/>
@@ -97,6 +97,6 @@
     </include>
   </group>
 
-  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find depthcamera)/rviz/2rs_camera.rviz"/>
+  <!-- <node pkg="rviz" type="rviz" name="rviz" args="-d $(find depthcamera)/rviz/2rs_camera.rviz"/> -->
 
 </launch>
