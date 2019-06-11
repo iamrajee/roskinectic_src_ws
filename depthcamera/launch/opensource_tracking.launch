@@ -1,9 +1,6 @@
 <launch>
-
-    <!-- <param name="/use_sim_time" value="true"/> -->
-
-    <!-- ==================== rs_camera ======================= -->
     <arg name="offline"          default="false"/>
+    <!-- ==================== rs_camera ======================= -->
     <include unless="$(arg offline)"
         file="$(find depthcamera)/launch/2rs_camera.launch">
         <arg name="align_depth" value="true"/> -->
@@ -11,6 +8,7 @@
 	    <!-- <arg name="enable_infra2" value="false"/> -->                     <!-- already false -->
         <!-- <arg name="unite_imu_method" value="linear_interpolation"/> --> <!-- imu not working -->
     </include>
+    <!-- <param if="$(arg offline) name="use_sim_time" type="bool" value="True"/> -->
 
     <!-- ============================ rtabmap ============================= -->
     <include file="$(find depthcamera)/launch/rtabmap.launch">
