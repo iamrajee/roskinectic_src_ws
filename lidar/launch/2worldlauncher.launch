@@ -1,0 +1,44 @@
+<launch>
+
+  <arg name="use_sim_time" default="true"/>
+  <param name="/use_sim_time" value="$(arg use_sim_time)"/> <!-- to synchronise gazebo with ros-->
+
+  <!-- ==================================== start gazebo server ============================-->
+  <!--   gazebo node param -->
+  <arg name="world_name" default="worlds/empty.world"/> <!-- will be overwritten by 2world.world-->
+  <arg name="respawn_gazebo" default="false"/>
+  <arg name="physics" default="ode"/> <!--?-->
+  <arg name="extra_gazebo_args" default=""/>
+  <!-- clock -->
+  <arg name="use_clock_frequency" default="false"/>
+  <arg name="pub_clock_frequency" default="100"/>
+  <group if="$(arg use_clock_frequency)">
+    <param name="gazebo/pub_clock_frequency" value="$(arg pub_clock_frequency)" />
+  </group>
+
+  <arg name="headless" default="false"/>
+  <!-- set command arguments -->
+  <arg name="paused" default="false"/>
+  <arg name="recording" default="false"/>
+  <arg name="verbose" default="false"/>
+  <arg name="debug" default="false"/>
+  <arg unless="$(arg paused)" name="command_arg1" value=""/>
+  <arg unless="$(arg recording)" name="command_arg2" value=""/>
+  <arg unless="$(arg verbose)" name="command_arg3" value=""/>
+  <arg unless="$(arg debug)" name="script_type" value="gzserver"/>
+  <arg     if="$(arg paused)" name="command_arg1" value="-u"/>
+  <arg     if="$(arg recording)" name="command_arg2" value="-r"/>
+  <arg     if="$(arg verbose)" name="command_arg3" value="--verbose"/>
+  <arg     if="$(arg debug)" name="script_type" value="debug"/>
+  <node name="gazebo" pkg="gazebo_ros" type="$(arg script_type)" respawn="$(arg respawn_gazebo)" output="screen"
+	args="/scan:=/scan2 $(arg command_arg1) $(arg command_arg2) $(arg command_arg3) -e $(arg physics) $(arg extra_gazebo_args) $(arg world_name)" />
+  <!-- changed the scan to scan2 -->
+<!-- =====================================================================================-->
+
+<!-- ==================================== start gazebo client ============================-->
+  <arg name="gui" default="true"/> <!-- overwritten -->
+  <group if="$(arg gui)">
+    <node name="gazebo_gui" pkg="gazebo_ros" type="gzclient" respawn="false" output="screen" args="$(arg command_arg3)"/>
+  </group>
+
+</launch>

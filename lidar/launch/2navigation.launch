@@ -1,0 +1,43 @@
+<launch>
+  
+  <!-- =============== gazebo =================== -->
+  <include file="$(find lidar)/launch/2gazebo.launch">
+      <arg name="gui" value="false"/>
+  </include>
+
+  <!-- ============== model =============-->
+  <arg name="model" default="2burger"/>
+
+  <!-- ==================== robot_description ===================== -->
+  <param name="robot_description" command="$(find xacro)/xacro --inorder $(find lidar)/urdf/$(arg model).urdf.xacro" />
+
+  <!-- ===================== robot_state_publisher ======================== -->
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+    <param name="publish_frequency" type="double" value="50.0" /> <!--default-->
+    <param name="tf_prefix" value=""/><!--multi_robot_names-->
+  </node>
+
+  <!-- ===================== lidar ==================== -->
+  <include file="$(find lidar)/launch/2lidar.launch" />
+
+  <!-- =================== Map server ================== -->
+  <arg name="map_file" default="$(find lidar)/maps/2map.yaml"/>
+  <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
+
+  <!-- =============== AMCL - for localisation ===================== -->
+  <include file="$(find lidar)/launch/2amcl.launch"/>
+  
+  <!-- =============== move_base - for path planning =================-->
+  <include file="$(find lidar)/launch/2move_base.launch">
+    <arg name="model" value="$(arg model)" />
+    <arg name="move_forward_only" value="false"/>
+  </include>
+
+  <!-- ====================== rviz ================== -->
+  <arg name="rviz" default="true"/>
+  <group if="$(arg rviz)">
+    <node pkg="rviz" type="rviz" name="rviz" required="true"
+          args="-d $(find lidar)/rviz/2navigation.rviz"/>
+  </group>
+
+</launch>
