@@ -26,8 +26,8 @@
   <arg name="color_width"         default="424"/> <!-- 480x270 not supported for color-->
   <arg name="color_height"        default="240"/>
 
-  <arg name="color_fps"           default="15"/>
-  <arg name="depth_fps"           default="15"/>
+  <arg name="color_fps"           default="30"/>
+  <arg name="depth_fps"           default="30"/>
   <arg name="infra_fps"           default="15"/>
   <arg name="fisheye_fps"         default="15"/>
   <arg name="gyro_fps"            default="400"/>
