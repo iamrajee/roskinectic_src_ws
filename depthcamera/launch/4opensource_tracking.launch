@@ -17,7 +17,7 @@
 
 
     <!-- ============================= lidar ================================ -->
-    <include file="$(find lidar)/launch/2lidar.launch" />
+    <include unless="$(arg offline)" file="$(find lidar)/launch/2lidar.launch" />
 
     <!-- ==================== rs_camera ======================= -->
     <include unless="$(arg offline)"

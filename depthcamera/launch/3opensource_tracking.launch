@@ -11,17 +11,17 @@
     <!-- <node pkg="tf" type="static_transform_publisher" name="tf_publisher_camera_link" args="0 0 0 0 0 0 1 /base_link /camera_link 100"/> -->
     <!-- <node pkg="tf" type="static_transform_publisher" name="tf_publisher_base_scan" args="0 0 0 0 0 0 1 /base_link /base_scan 100"/> -->
 <!--  -->
-    <node pkg="tf" type="static_transform_publisher" name="tf_publisher_base_link" args="0 0 0.067 0 0 0 1 /base_footprint /base_link 100"/>
+    <node pkg="tf" type="static_transform_publisher" name="tf_publisher_base_link" args="0 0 0.302 0 0 0 1 /base_footprint /base_link 100"/>
+    <!-- <node pkg="tf" type="static_transform_publisher" name="tf_publisher_base_link" args="0 0 0.067 0 0 0 1 /base_footprint /base_link 100"/> -->
     <node pkg="tf" type="static_transform_publisher" name="tf_publisher_camera_link" args="0.075 0 0.0125 0 0 0 1 /base_link /camera_link 100"/>
     <node pkg="tf" type="static_transform_publisher" name="tf_publisher_base_scan" args="-0.038 0 0.0308 0 0 0 1 /base_link /base_scan 100"/>
 
 
     <!-- ============================= lidar ================================ -->
-    <include file="$(find lidar)/launch/2lidar.launch" />
+    <include unless="$(arg offline)" file="$(find lidar)/launch/2lidar.launch" />
 
     <!-- ==================== rs_camera ======================= -->
-    <include unless="$(arg offline)"
-        file="$(find depthcamera)/launch/2rs_camera.launch">
+    <include unless="$(arg offline)" file="$(find depthcamera)/launch/2rs_camera.launch">
         <arg name="align_depth" value="true"/>
         <arg name="linear_accel_cov" value="1.0"/>
     </include>
