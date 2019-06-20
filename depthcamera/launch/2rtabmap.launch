@@ -18,7 +18,7 @@
   <arg name="ground_truth_frame_id"   default=""/>     <!-- e.g., "world" -->
   <arg name="ground_truth_base_frame_id" default=""/>  <!-- e.g., "tracker", a fake frame matching the frame "frame_id" (but on different TF tree) -->
   <arg name="namespace"               default="rtabmap"/>
-  <arg name="database_path"           default="~/.ros/3rtabmap.db"/>
+  <arg name="database_path"           default="~/.ros/2rtabmap.db"/>
   <arg name="queue_size"              default="10"/>
   <arg name="wait_for_transform"      default="0.2"/>
   <arg     if="$(arg localization)" name="rtabmap_args"  default=""/>
@@ -140,6 +140,8 @@
           <param name="guess_frame_id"              type="string" value="$(arg odom_guess_frame_id)"/>
           <param name="guess_min_translation"       type="double" value="$(arg odom_guess_min_translation)"/>
           <param name="guess_min_rotation"          type="double" value="$(arg odom_guess_min_rotation)"/>
+          <!-- Autoreset odom whem lost -->
+          <param name="Odom/ResetCountdown"              value="1" />
         </node>
       </group>
     </group>
@@ -191,6 +193,8 @@
 	    <param name="Mem/InitWMWithAllNodes" type="string" value="$(arg localization)"/>
       <!--nav-->
       <param name="use_action_for_goal"     type="bool"   value="true"/>
+      <!-- when odom lost dont reset map-->
+      <param name="Rtabmap/StartNewMapOnLoopClosure" value="true"/>
     </node>
   
     <!-- ### 4 -->
