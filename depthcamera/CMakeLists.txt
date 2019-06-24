@@ -12,6 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   sensor_msgs
   std_msgs
+  #message_generation
 )
 
 ## System dependencies are found with CMake's conventions
@@ -198,3 +199,15 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
+#add_executable(wifi_signal_pub src/wifi_signal_pub.cpp)
+#target_link_libraries(wifi_signal_pub ${catkin_LIBRARIES} depthcamera)
+#add_dependencies(wifi_signal_pub wifi_signal_pub_generate_messages_cpp)
+# add_executable(wifi_signal_sub src/wifi_signal_sub.cpp)
+
+#add_executable(wifi_signal_pub src/wifi_signal_pub.cpp)
+#target_link_libraries(wifi_signal_pub depthcamera)
+#set_target_properties(wifi_signal_pub PROPERTIES OUTPUT_NAME "wifi_signal_pub")
+#add_executable(wifi_signal_sub src/wifi_signal_sub.cpp)
+#target_link_libraries(wifi_signal_sub depthcamera)
+#set_target_properties(wifi_signal_sub PROPERTIES OUTPUT_NAME "wifi_signal_sub")
