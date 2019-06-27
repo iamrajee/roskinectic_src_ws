@@ -1,9 +1,3 @@
-/* 
- * Software License Agreement (BSD License)
- * Copyright (c) 2017, UFactory, Inc.
- * All rights reserved.
- * Author: Roger Cui  <roger@ufactory.cc>   
- */
 #include <string>
 #include <ros/ros.h>
 #include <std_msgs/String.h>
