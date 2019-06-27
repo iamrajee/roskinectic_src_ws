@@ -1,0 +1,14 @@
+<launch>
+
+	<param name="use_gui" value= "False" />
+
+	<!-- =========== robot_state_publisher ============= -->
+	<param name="robot_description" command="cat $(find uarm)/urdf/pro_model.xacro" />
+	<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+	<!-- =========== write, moveit & rviz ============= -->
+	<node name="swiftpro_write_node2" pkg="uarm" type="swiftpro_write_node2"/>
+	<node name="swiftpro_moveit_node2" pkg="uarm" type="swiftpro_moveit_node2"/>
+	<node name="swiftpro_rviz_node2" pkg="uarm" type="swiftpro_rviz_node2"/>
+	
+</launch>
