@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="swiftpro" >
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="uarm" >
 
 <link name="Base">
 	<inertial>
@@ -10,7 +10,7 @@
 	</inertial>
 	<visual>
 		<geometry>
-			<mesh filename="package://swiftpro/urdf/pro_links/Base.STL"/>
+			<mesh filename="package://uarm/urdf/pro_links/Base.STL"/>
 		</geometry>
 		<origin xyz = "0 0 0 " rpy = "0 0 0"/>
 		<material name = "">
@@ -29,7 +29,7 @@
 	</inertial>
 	<visual>
 		<geometry>
-			<mesh filename="package://swiftpro/urdf/pro_links/Link1.STL"/>
+			<mesh filename="package://uarm/urdf/pro_links/Link1.STL"/>
 		</geometry>
 		<origin xyz = "0 0 -0.0723" rpy = "0 0 0" />
 		<material name = "">
@@ -56,7 +56,7 @@
 	</inertial>
 	<visual>
 		<geometry>
-			<mesh filename="package://swiftpro/urdf/pro_links/Link2.STL"/>
+			<mesh filename="package://uarm/urdf/pro_links/Link2.STL"/>
 		</geometry>
 		<origin xyz = "-0.0132 0 -0.1056" rpy = "0 0 0" />
 		<material name = "">
@@ -83,7 +83,7 @@
 	</inertial>
 	<visual>
 		<geometry>
-			<mesh filename="package://swiftpro/urdf/pro_links/Link3.STL"/>
+			<mesh filename="package://uarm/urdf/pro_links/Link3.STL"/>
 		</geometry>
 		<origin xyz="-0.0132 0 -0.24767"/>
 		<material name="">
@@ -112,7 +112,7 @@
 	</inertial>
 	<visual>
 		<geometry>
-			<mesh filename="package://swiftpro/urdf/pro_links/Link4.STL"/>
+			<mesh filename="package://uarm/urdf/pro_links/Link4.STL"/>
 		</geometry>
 		<origin xyz = "-0.0132 0 -0.24767" rpy = "0 0 0" />
 		<material name = "">
@@ -139,7 +139,7 @@
 	</inertial>
 	<visual>
 		<geometry>
-			<mesh filename="package://swiftpro/urdf/pro_links/Link5.STL"/>
+			<mesh filename="package://uarm/urdf/pro_links/Link5.STL"/>
 		</geometry>
 		<origin xyz = "0.0215 0 -0.1223" rpy = "0 0 0" />
 		<material name = "">
@@ -166,7 +166,7 @@
 	</inertial>
 	<visual>
 		<geometry>
-			<mesh filename="package://swiftpro/urdf/pro_links/Link6.STL"/>
+			<mesh filename="package://uarm/urdf/pro_links/Link6.STL"/>
 		</geometry>
 		<origin xyz = "-0.0132 0 -0.1056" rpy = "0 0 0" />
 		<material name = "">
@@ -193,7 +193,7 @@
 	</inertial>
 	<visual>
 		<geometry>
-			<mesh filename="package://swiftpro/urdf/pro_links/Link7.STL"/>
+			<mesh filename="package://uarm/urdf/pro_links/Link7.STL"/>
 		</geometry>
 		<origin xyz = "0.0323 0 -0.10258" rpy = "0 0 0" />
 		<material name = "">
@@ -220,7 +220,7 @@
 	</inertial>
 	<visual>
 		<geometry>
-			<mesh filename="package://swiftpro/urdf/pro_links/Gripper.STL"/>
+			<mesh filename="package://uarm/urdf/pro_links/Gripper.STL"/>
 		</geometry>
 		<origin xyz = "-0.17201 0 -0.24651" rpy = "0 0 0" />
 		<material name = "">
@@ -247,7 +247,7 @@
 	</inertial>
 	<visual>
 		<geometry>
-			<mesh filename="package://swiftpro/urdf/pro_links/Link9.STL"/>
+			<mesh filename="package://uarm/urdf/pro_links/Link9.STL"/>
 		</geometry>
 		<origin xyz = "-0.19941 0 -0.27471" rpy = "0 0 0" />
 		<material name = "">
