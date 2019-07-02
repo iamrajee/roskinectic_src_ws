@@ -4,10 +4,11 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
-        - /MotionPlanning1
-        - /MotionPlanning1/Planned Path1
+        - /Global Options1
+        - /Grid1
+        - /TF1
       Splitter Ratio: 0.742560029
-    Tree Height: 272
+    Tree Height: 444
   - Class: rviz/Help
     Name: Help
   - Class: rviz/Views
@@ -139,9 +140,9 @@ Visualization Manager:
         TextHeight: 0.0799999982
       Planning Request:
         Colliding Link Color: 255; 0; 0
-        Goal State Alpha: 1
+        Goal State Alpha: 0.899999976
         Goal State Color: 250; 128; 0
-        Interactive Marker Size: 0
+        Interactive Marker Size: 0.150000006
         Joint Violation Color: 255; 0; 255
         Planning Group: arm
         Query Goal State: true
@@ -216,14 +217,78 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-        Robot Alpha: 0.5
+        Robot Alpha: 1
         Show Robot Collision: false
         Show Robot Visual: true
       Value: true
       Velocity_Scaling_Factor: 1
+    - Class: rviz/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: false
+        Base:
+          Value: true
+        Link1:
+          Value: false
+        Link2:
+          Value: false
+        Link3:
+          Value: false
+        Link4:
+          Value: false
+        Link5:
+          Value: false
+        Link6:
+          Value: false
+        Link7:
+          Value: false
+        Link8:
+          Value: false
+        Link9:
+          Value: false
+        camera_color_frame:
+          Value: false
+        camera_color_optical_frame:
+          Value: false
+        camera_depth_frame:
+          Value: false
+        camera_depth_optical_frame:
+          Value: false
+        camera_link:
+          Value: true
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        camera_link:
+          Base:
+            Link1:
+              Link2:
+                Link3:
+                  Link8:
+                    Link9:
+                      {}
+                Link4:
+                  {}
+              Link5:
+                {}
+              Link6:
+                Link7:
+                  {}
+          camera_color_frame:
+            camera_color_optical_frame:
+              {}
+          camera_depth_frame:
+            camera_depth_optical_frame:
+              {}
+      Update Interval: 0
+      Value: true
   Enabled: true
   Global Options:
-    Background Color: 48; 48; 48
+    Background Color: 249; 252; 255
     Default Light: true
     Fixed Frame: Base
     Frame Rate: 30
@@ -237,39 +302,39 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 0.966275752
+      Distance: 2.00008917
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.185986906
-        Y: 0.0845887959
-        Z: 1.3542035e-07
+        X: 0.0673612654
+        Y: -0.0645906776
+        Z: 7.58157057e-08
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.269796431
+      Pitch: 0.78979677
       Target Frame: Base
       Value: XYOrbit (rviz)
-      Yaw: 1.55357933
+      Yaw: 2.93174911
     Saved: ~
 Window Geometry:
   Displays:
-    collapsed: false
+    collapsed: true
   Height: 851
   Help:
     collapsed: false
-  Hide Left Dock: false
+  Hide Left Dock: true
   Hide Right Dock: false
   MotionPlanning:
-    collapsed: false
+    collapsed: true
   MotionPlanning - Trajectory Slider:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd0000000100000000000002a2000002fffc0200000007fb000000100044006900730070006c006100790073010000003a0000014a000000c600fffffffb0000000800480065006c00700000000342000000bb0000006e00fffffffb0000000a0056006900650077007300000003b0000000b00000009e00fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c0069006400650072010000018a0000003e0000003e00fffffffb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e006701000001ce0000016b0000016b00ffffff00000398000002ff00000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd00000001000000000000027400000260fc0200000006fc0000003a000002600000000000fffffffaffffffff0100000002fb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e00670000000000ffffffff0000027400fffffffb000000100044006900730070006c0061007900730000000000000002740000015600fffffffb0000000800480065006c00700000000342000000bb0000006e00fffffffb0000000a0056006900650077007300000003b0000000b00000009e00fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c006900640065007200000001060000003e0000003e00ffffff00000640000002ff00000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Views:
     collapsed: false
   Width: 1600

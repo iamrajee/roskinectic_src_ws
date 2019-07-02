@@ -7,11 +7,11 @@
     <include file="$(find depthcamera)/launch/includes/nodelet.launch.xml">
       <arg name="serial_no"         value="$(arg serial_no)"/>
       <arg name="json_file_path"    value="$(arg json_file_path)"/>
-      <arg name="depth_width"       value="640"/>
-      <arg name="depth_height"      value="480"/>
-      <arg name="depth_fps"         value="6"/>
-      <arg name="color_width"       value="640"/>
-      <arg name="color_height"      value="480"/>
+      <arg name="depth_width"       value="480"/>
+      <arg name="depth_height"      value="270"/>
+      <arg name="depth_fps"         value="4"/>
+      <arg name="color_width"       value="424"/>
+      <arg name="color_height"      value="240"/>
       <arg name="color_fps"         value="6"/>
       <arg name="enable_depth"      value="true"/>
       <arg name="enable_color"      value="true"/>
@@ -25,6 +25,6 @@
       <arg name="tf_prefix"         value="$(arg camera)"/>
     </include>
 
-    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find depthcamera)/rviz/pointcloud.rviz" required="true" />
+    <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find depthcamera)/rviz/pointcloud.rviz" required="true" /> -->
   </group>
 </launch>
