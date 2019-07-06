@@ -8,7 +8,7 @@ Panels:
         - /Grid1
         - /TF1
       Splitter Ratio: 0.742560029
-    Tree Height: 444
+    Tree Height: 422
   - Class: rviz/Help
     Name: Help
   - Class: rviz/Views
@@ -77,6 +77,10 @@ Visualization Manager:
           Expand Link Details: false
           Expand Tree: false
           Link Tree Style: Links in Alphabetic Order
+          Link0:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
           Link1:
             Alpha: 1
             Show Axes: false
@@ -172,6 +176,10 @@ Visualization Manager:
           Expand Link Details: false
           Expand Tree: false
           Link Tree Style: Links in Alphabetic Order
+          Link0:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
           Link1:
             Alpha: 1
             Show Axes: false
@@ -229,6 +237,8 @@ Visualization Manager:
         All Enabled: false
         Base:
           Value: true
+        Link0:
+          Value: true
         Link1:
           Value: false
         Link2:
@@ -247,23 +257,13 @@ Visualization Manager:
           Value: false
         Link9:
           Value: false
-        camera_color_frame:
-          Value: false
-        camera_color_optical_frame:
-          Value: false
-        camera_depth_frame:
-          Value: false
-        camera_depth_optical_frame:
-          Value: false
-        camera_link:
-          Value: true
       Marker Scale: 1
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: true
       Tree:
-        camera_link:
+        Link0:
           Base:
             Link1:
               Link2:
@@ -278,12 +278,6 @@ Visualization Manager:
               Link6:
                 Link7:
                   {}
-          camera_color_frame:
-            camera_color_optical_frame:
-              {}
-          camera_depth_frame:
-            camera_depth_optical_frame:
-              {}
       Update Interval: 0
       Value: true
   Enabled: true
@@ -302,7 +296,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 2.00008917
+      Distance: 0.992547691
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
@@ -317,24 +311,24 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.78979677
+      Pitch: -0.0452031493
       Target Frame: Base
       Value: XYOrbit (rviz)
-      Yaw: 2.93174911
+      Yaw: 1.48174942
     Saved: ~
 Window Geometry:
   Displays:
-    collapsed: true
+    collapsed: false
   Height: 851
   Help:
     collapsed: false
-  Hide Left Dock: true
+  Hide Left Dock: false
   Hide Right Dock: false
   MotionPlanning:
-    collapsed: true
+    collapsed: false
   MotionPlanning - Trajectory Slider:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd00000001000000000000027400000260fc0200000006fc0000003a000002600000000000fffffffaffffffff0100000002fb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e00670000000000ffffffff0000027400fffffffb000000100044006900730070006c0061007900730000000000000002740000015600fffffffb0000000800480065006c00700000000342000000bb0000006e00fffffffb0000000a0056006900650077007300000003b0000000b00000009e00fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c006900640065007200000001060000003e0000003e00ffffff00000640000002ff00000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd000000010000000000000274000002fffc0200000006fc0000003a000002ff0000018501000019fa000000000100000002fb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e00670100000000ffffffff0000027400fffffffb000000100044006900730070006c0061007900730100000000000002740000015600fffffffb0000000800480065006c00700000000342000000bb0000006e00fffffffb0000000a0056006900650077007300000003b0000000b00000009e00fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c006900640065007200000001060000003e0000003e00ffffff000003c6000002ff00000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Views:
     collapsed: false
   Width: 1600
