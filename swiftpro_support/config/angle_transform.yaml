@@ -1,0 +1,14 @@
+# Linear regression values for joint transformations
+
+- #bottom_motor:
+    intercept: -2.65206462722
+    slope: 0.00153384304702
+- #right_motor:
+    intercept: -5.36420989579
+    slope: 0.00153099065737
+- #left_motor:
+    intercept: -6.37428555403
+    slope: 0.00153360465331
+- #E_motor:
+    intercept: 1.00000000000000
+    slope: 1.00000000000000

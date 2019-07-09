@@ -1,0 +1,28 @@
+<package>
+
+  <name>swiftpro_support</name>
+  <version>0.3.0</version>
+  <description>
+     An automatically generated package with all the configuration and launch files for using the swiftpro with the MoveIt! Motion Planning Framework
+  </description>
+  <author email="sorreladam@gmail.com">Adam Stovicek</author>
+  <maintainer email="sorreladam@gmail.com">Adam Stovicek</maintainer>
+
+  <license>BSD</license>
+
+  <url type="website">http://moveit.ros.org/</url>
+  <url type="bugtracker">https://github.com/ros-planning/moveit/issues</url>
+  <url type="repository">https://github.com/ros-planning/moveit</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>rospy</run_depend>
+  <!-- This package is referenced in the warehouse launch files, but does not build out of the box at the moment. Commented the dependency until this works. -->
+  <!-- <run_depend>warehouse_ros_mongo</run_depend> -->
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>swiftpro_core</build_depend>
+  <run_depend>swiftpro_core</run_depend>
+
+
+</package>

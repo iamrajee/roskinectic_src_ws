@@ -1,0 +1,310 @@
+<robot
+  name="swiftpro">
+
+  <klampt package_root="/home/doron/uarm/ROS/src" fixed_root_link="Link 0"/>
+
+  <link
+    name="base_footprint">
+    <fixed>
+      <origin
+        xyz="0.0000 0.0000 0.0000"
+        rpy="0 0 0" />
+    </fixed>
+  </link>
+
+  <link
+    name="base">
+    <inertial>
+      <origin
+        xyz="-9.34726122709917E-19 1.77939460840268E-18 0.0300064791337254"
+        rpy="0 0 0" />
+      <mass
+        value="0.679637270218751" />
+      <inertia
+        ixx="0.000817651950315855"
+        ixy="-1.85331470603731E-20"
+        ixz="6.68744425350768E-21"
+        iyy="0.000817651950315855"
+        iyz="4.10821966385872E-20"
+        izz="0.00116316552753551" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swiftpro_support/meshes/Base.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swiftpro_support/meshes/Base.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="link1">
+    <inertial>
+      <origin
+        xyz="-2.55568402493348E-06 0.030540926133861 0.00413270671578733"
+        rpy="0 0 0" />
+      <mass
+        value="0.296580985459948" />
+      <inertia
+        ixx="0.00018532742603172"
+        ixy="1.39475759212683E-08"
+        ixz="1.37901625170713E-08"
+        iyy="0.000619593242561017"
+        iyz="-3.73559978369842E-06"
+        izz="0.000573811013496632" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swiftpro_support/meshes/Link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swiftpro_support/meshes/Link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="link2">
+    <inertial>
+      <origin
+        xyz="0.0647725407680328 -0.00155255361416372 0.000594842747156696"
+        rpy="0 0 0" />
+      <mass
+        value="0.0218697004736725" />
+      <inertia
+        ixx="2.38072716428988E-06"
+        ixy="2.14219537562554E-08"
+        ixz="-9.19598616394197E-07"
+        iyy="4.39492923296653E-05"
+        iyz="1.1133182076096E-09"
+        izz="4.31316985886006E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swiftpro_support/meshes/Link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swiftpro_support/meshes/Link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="link3">
+    <inertial>
+      <origin
+        xyz="0.000193012686506066 0.0486137488132938 0.0104697897003571"
+        rpy="0 0 0" />
+      <mass
+        value="0.0264312168363855" />
+      <inertia
+        ixx="9.77218662307356E-05"
+        ixy="4.77066994255986E-07"
+        ixz="5.6927633097355E-08"
+        iyy="1.96810067988756E-06"
+        iyz="5.8966089996398E-06"
+        izz="9.67664171897577E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swiftpro_support/meshes/Link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swiftpro_support/meshes/Link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="link4">
+    <inertial>
+      <origin
+        xyz="-0.000777958895033593 -0.0272350449440512 0.00926081978052293"
+        rpy="0 0 0" />
+      <mass
+        value="0.0128546978194405" />
+      <inertia
+        ixx="3.28850858242837E-06"
+        ixy="-2.07790980253739E-08"
+        ixz="-2.62998809825329E-07"
+        iyy="2.10901510880569E-06"
+        iyz="3.82707812767876E-07"
+        izz="2.19265877841565E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swiftpro_support/meshes/Gripper.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swiftpro_support/meshes/Gripper.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="joint_0"
+    type="fixed">
+    <origin
+      xyz="0 0 0.07225"
+      rpy="0 0 0" />
+    <parent
+      link="base_footprint"/>
+    <child
+      link="base"/>
+  </joint>
+
+  <joint
+    name="joint_1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.07225"
+      rpy="1.5708 -1.2246E-16 0" />
+    <parent
+      link="base" />
+    <child
+      link="link1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0.5137"
+      upper="2.7363"
+      effort="0.1"
+      velocity="0.1" />
+  </joint>
+
+  <joint
+    name="joint_2"
+    type="revolute">
+    <origin
+      xyz="0 0.03355 -0.01615"
+      rpy="3.14159 1.5708 1.5708" />
+    <parent
+      link="link1" />
+    <child
+      link="link2" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0.03559"
+      upper="2.2769"
+      effort="0.1"
+      velocity="0.1" />
+  </joint>
+
+  <joint
+    name="joint_3"
+    type="revolute">
+    <origin
+      xyz="0.1428 -0.00075 0.00465"
+      rpy="1.5708 4.3153E-17 1.5708" />
+    <parent
+      link="link2" />
+    <child
+      link="link3" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1.016"
+      upper="1.3512"
+      effort="0.1"
+      velocity="0.1" />
+  </joint>
+
+  <joint
+    name="joint_4"
+    type="revolute">
+    <origin
+      xyz="0 0.1578 0.00026846"
+      rpy="3.14159 0 1.5779E-17" />
+    <parent
+      link="link3" />
+    <child
+      link="link4" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.141"
+      upper="3.141"
+      effort="0.1"
+      velocity="0.1" />
+    <mimic
+      joint="joint_1"
+      offset="1.570796"/>
+  </joint>
+</robot>
