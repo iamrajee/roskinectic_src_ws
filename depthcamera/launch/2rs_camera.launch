@@ -97,6 +97,7 @@
     </include>
   </group>
 
+  
   <!-- <node pkg="rviz" type="rviz" name="rviz" args="-d $(find depthcamera)/rviz/2rs_camera.rviz"/> -->
 
 </launch>
