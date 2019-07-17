@@ -163,7 +163,7 @@ class MoveGroupPythonIntefaceTutorial(object):
     box_name = self.box_name
     r = self.r
     s = self.s
-    eef_link = self.eef_link
+    eef_link = self.eef_linkR
     gns = self.gns
     grasping_group = 'hand'
     touch_links = r.get_link_names(group=grasping_group)

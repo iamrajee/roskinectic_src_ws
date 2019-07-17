@@ -16,4 +16,4 @@ s.addCube(object_name, 0.1, 1, 0, 0.5)# add a cube of 0.1m size, at [1, 0, 0.5] 
 # l = PlaceLocation()# fill in l
 # pp.place("object_name" [l, ], goal_is_eef = True, support_name = "supporting_surface")
 
-# s.removeCollisionObject(object_name)# remove the cube
+s.removeCollisionObject(object_name)# remove the cube
