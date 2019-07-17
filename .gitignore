@@ -49,3 +49,15 @@ qtcreator-*
 
 # Catkin custom files
 CATKIN_IGNORE
+ardrone_simulator_gazebo7
+aruco_ros
+moveit_tutorials
+vrep_ros_interface
+usb_cam
+rosserial
+pluto_drone
+openmv_ros
+hungry_bird
+moveit_tutorials
+rosserial
+manualcontrol_master/scripts/Face-Recognition
