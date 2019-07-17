@@ -1,0 +1,8 @@
+<launch>
+
+  <!-- <include file="$(find panda)/launch/add_pointcloud.launch" /> -->
+
+  <!-- Run the detection and adding cylinder node -->
+  <node pkg="panda" type="detect_and_add_cylinder" name="detect_and_add_cylinder"/>
+
+</launch>

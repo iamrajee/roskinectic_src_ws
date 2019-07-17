@@ -1,0 +1,5 @@
+<launch>
+
+    <node name="move_group_python_interface" pkg="panda" type="move_group_python_interface.py" respawn="false" output="screen"/>
+
+</launch>

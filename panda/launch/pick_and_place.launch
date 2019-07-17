@@ -1,0 +1,8 @@
+<launch>
+    <include file="$(find panda_moveit_config)/launch/demo.launch" />
+    <include file="$(find panda)/launch/add_pointcloud.launch" />
+    <include file="$(find panda)/launch/detect_and_add_cylinder.launch" />
+  
+    <node name="pick_and_place" pkg="panda" type="pick_and_place.py" respawn="false" output="screen"/>
+
+</launch>
