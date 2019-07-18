@@ -1,0 +1,12 @@
+<launch>
+	
+    <!-- <node name="image_view" pkg="image_view" type="image_view" respawn="false" output="screen">
+        <remap from="image" to="/camera/color/image_raw"/>
+        <param name="autosize" value="false" />
+    </node> -->
+    
+    <group ns="teleop">
+        <node pkg="turtlebot_teleop" name="turtlebot_teleop" type="turtlebot_teleop_key"/>
+    </group>
+
+</launch>
