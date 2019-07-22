@@ -17,10 +17,11 @@
   </node>
 
   <!-- lidar -->
-  <include file="$(find lidar)/launch/lidar.launch" />
+  <!-- <include file="$(find lidar)/launch/lidar.launch" /> -->
 
   <!-- Map server -->
-  <arg name="map_file" default="$(find lidar)/maps/map.yaml"/>
+  <!-- <arg name="map_file" default="$(find lidar)/maps/map.yaml"/> -->
+  <arg name="map_file" default="/home/rajendra/map.yaml"/>
   <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
 
   <!-- AMCL - for localisation -->
