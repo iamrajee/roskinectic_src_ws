@@ -64,7 +64,7 @@ Visualization Manager:
       Color: 255; 255; 255
       Color Transformer: RGB8
       Decay Time: 0
-      Enabled: true
+      Enabled: false
       Invert Rainbow: false
       Max Color: 255; 255; 255
       Max Intensity: 2.34176998e-38
@@ -81,7 +81,7 @@ Visualization Manager:
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
-      Value: true
+      Value: false
     - Class: rviz/TF
       Enabled: true
       Frame Timeout: 15
@@ -105,6 +105,10 @@ Visualization Manager:
           Value: false
         camera_link:
           Value: true
+        map:
+          Value: true
+        odom:
+          Value: true
       Marker Scale: 1
       Name: TF
       Show Arrows: true
@@ -124,6 +128,10 @@ Visualization Manager:
               camera_depth_frame:
                 camera_depth_optical_frame:
                   {}
+        map:
+          {}
+        odom:
+          {}
       Update Interval: 0
       Value: true
     - Class: rviz/Image
@@ -284,7 +292,8 @@ Visualization Manager:
       Marker Topic: /rtabmap/labels
       Name: MarkerArray
       Namespaces:
-        {}
+        ids: true
+        labels: true
       Queue Size: 100
       Value: true
     - Alpha: 1
@@ -402,8 +411,8 @@ Visualization Manager:
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
-        Max Value: 4.60200644
-        Min Value: -2.01984882
+        Max Value: 16.3002014
+        Min Value: 4.89537477
         Value: true
       Axis: Y
       Channel Name: intensity
@@ -433,7 +442,7 @@ Visualization Manager:
   Global Options:
     Background Color: 48; 48; 48
     Default Light: true
-    Fixed Frame: base_link
+    Fixed Frame: map
     Frame Rate: 30
   Name: root
   Tools:
@@ -450,7 +459,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/ThirdPersonFollower
-      Distance: 8.79091644
+      Distance: 19.4511757
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
@@ -465,10 +474,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 1.4897964
+      Pitch: -0.190202951
       Target Frame: camera_link
       Value: ThirdPersonFollower (rviz)
-      Yaw: 2.83269572
+      Yaw: 4.90951252
     Saved: ~
 Window Geometry:
   Displays:
