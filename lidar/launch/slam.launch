@@ -17,7 +17,7 @@
   </node>
 
   <!-- ============================= lidar ================================ -->
-  <!-- <include file="$(find lidar)/launch/lidar.launch" /> -->
+  <include file="$(find lidar)/launch/lidar.launch" />
 
   <!-- ============================= gmapping ============================== -->
   <arg name="set_base_frame" default="base_footprint"/>
