@@ -78,19 +78,14 @@ class position_hold():
 			self.differential[i] = self.proposnal[i] - self.prev_values[i]
 			self.output[i] = (self.Kp[i] * self.proposnal[i]) + self.iterm[i] + (self.Kd[i] * self.differential[i])
 			self.prev_values[i] = self.proposnal[i]
-
 			self.error_pub[i].publish(self.proposnal[i])
-
 		self.cmd.rcPitch = 		1500 - self.output[0] #(+ve) want to decre.
 		self.cmd.rcRoll = 		1500 - self.output[1] #(-ve) want to incre.
 		self.cmd.rcThrottle = 	1500 - self.output[2] #(-ve) want to incre.
 		self.cmd.rcYaw = 		1500 + self.output[3]
-
 		self.limit()
-
 		self.drone_command_pub.publish(self.cmd)
 		self.zero_line_pub.publish(self.zero_line_value)
-
 		rospy.sleep(self.pid_sample_time)
 
 	def disarm(self):
