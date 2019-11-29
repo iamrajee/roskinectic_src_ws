@@ -135,25 +135,18 @@ class QuadCopterEnv(gym.Env):
                 data_pose = rospy.wait_for_message('/drone/gt_pose', Pose, timeout=5)
             except:
                 rospy.loginfo("Current drone pose not ready yet, retrying for getting robot pose")
-
-        data_imu = None
+                data_imu = None
         while data_imu is None:
             try:
                 data_imu = rospy.wait_for_message('/drone/imu', Imu, timeout=5)
             except:
                 rospy.loginfo("Current drone imu not ready yet, retrying for getting robot imu")
-        
         return data_pose, data_imu
-
-    def calculate_dist_between_two_Points(self,p_init,p_end):
+    def calculate_dist_between_two_Points(self,p_init,p_end):                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
         a = np.array((p_init.x ,p_init.y, p_init.z))
         b = np.array((p_end.x ,p_end.y, p_end.z))
-        
         dist = np.linalg.norm(a-b)
-        
         return dist
-
-
     def init_desired_pose(self):
         
         current_init_pose, imu = self.take_observation()

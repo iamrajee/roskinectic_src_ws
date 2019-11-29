@@ -66,25 +66,22 @@ class position_hold():
 	def pid(self):
 		self.proposnal = [0.0, 0.0, 0.0, 0.0] #reset to 0
 		self.differential = [0.0, 0.0, 0.0, 0.0] #reset to 0
-		for i in range (0, 4):
-			self.proposnal[i] = self.setpoint[i] - self.droneAruco_pos[i]
-			self.integral[i] = self.integral[i] + self.proposnal[i]
-			self.differential[i] = self.proposnal[i] - self.prev_values[i]
-			self.output[i] = (self.Kp[i] * self.proposnal[i]) + (self.Ki[i] * self.integral[i]) + (self.Kd[i] * self.differential[i])
+		for i in range (0, 4): #for [x,y,z,yaw]
+			self.proposnal[i] = self.setpoint[i] - self.droneAruco_pos[i]	#p
+			self.integral[i] = self.integral[i] + self.proposnal[i]			#I
+			self.differential[i] = self.proposnal[i] - self.prev_values[i]	#D
+			#(kp*P + ki*I + kd*D)
+			self.output[i] = (self.Kp[i] * self.proposnal[i]) \
+				+ (self.Ki[i] * self.integral[i]) + (self.Kd[i] * self.differential[i])
 			self.prev_values[i] = self.proposnal[i]
-
 			self.error_pub[i].publish(self.proposnal[i])
-
-		self.cmd.rcPitch = 1500 - self.output[0]
-		self.cmd.rcRoll = 1500 - self.output[1]
-		self.cmd.rcThrottle = 1500 - self.output[2]
-		self.cmd.rcYaw = 1500 + self.output[3]
-
-		self.limit()
-
-		self.drone_command_pub.publish(self.cmd)
+		self.cmd.rcPitch = 1500 - self.output[0] #pitch
+		self.cmd.rcRoll = 1500 - self.output[1]	#roll
+		self.cmd.rcThrottle = 1500 - self.output[2] #throttle
+		self.cmd.rcYaw = 1500 + self.output[3]	#yaw
+		self.limit()							#bound
+		self.drone_command_pub.publish(self.cmd)#publish
 		self.zero_line_pub.publish(self.zero_line_value)
-
 		rospy.sleep(self.pid_sample_time)
 
 	def disarm(self):
