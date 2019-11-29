@@ -1,0 +1,5 @@
+roslaunch turtlebot3_gazebo turtlebot3_world.launch
+roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
+roslaunch turtlebot3_slam turtlebot3_slam.launch
+#rosrun rviz rviz -d `rospack find turtlebot3_slam`/rviz/turtlebot3_slam.rviz
+rosrun map_server map_saver -f ~/map
