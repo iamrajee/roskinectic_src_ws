@@ -33,7 +33,7 @@ This ROS kinectic workspace src folder, which was created on Ubuntu 18.04.
 
 > All the `code` required to get started
 - #### Prerequisite
-    - You should have ROS2 kinectic on your ubuntu 18.04.
+    - You should have ROS kinectic on your ubuntu 18.04.
     - All ROS dependency is satisfied.
 
 - #### Clone
