@@ -1,22 +1,22 @@
-# ROS2 Melodic Workspace
+# ROS2 Kinectic Workspace
 
-[![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)](https://travis-ci.org/badges/badgerbadgerbadger) [![Coverage Status](http://img.shields.io/coveralls/badges/badgerbadgerbadger.svg?style=flat-square)](https://coveralls.io/r/badges/badgerbadgerbadger) [![MIT License](https://img.shields.io/github/license/iamrajee/ws_moveit.svg)](http://badges.mit-license.org) [![GitHub Issues](https://img.shields.io/github/issues/iamrajee/ws_moveit.svg)](https://github.com/iamrajee/ws_moveit/issues) [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/iamrajee/ws_moveit.svg)](https://github.com/iamrajee/ws_moveit/pulls) [![Gem Version](http://img.shields.io/gem/v/badgerbadgerbadger.svg?style=flat-square)](https://rubygems.org/gems/badgerbadgerbadger) [![Gitter](https://badges.gitter.im/iamrajee-ROS/community.svg)](https://gitter.im/iamrajee-ROS/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) [![Join our Slack Workspace](https://img.shields.io/badge/Slack%20Workspace-roboticsclubiitpkd.slack.com-blue.svg?logo=slack&longCache=true&style=flat)](https://roboticsclubiitpkd.slack.com) [![first-timers-only](https://img.shields.io/badge/first--timers--only-friendly-blue.svg)](https://www.firsttimersonly.com/)
+[![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)](https://travis-ci.org/badges/badgerbadgerbadger) [![Coverage Status](http://img.shields.io/coveralls/badges/badgerbadgerbadger.svg?style=flat-square)](https://coveralls.io/r/badges/badgerbadgerbadger) [![MIT License](https://img.shields.io/github/license/iamrajee/roskinectic_src.svg)](http://badges.mit-license.org) [![GitHub Issues](https://img.shields.io/github/issues/iamrajee/roskinectic_src.svg)](https://github.com/iamrajee/roskinectic_src/issues) [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/iamrajee/roskinectic_src.svg)](https://github.com/iamrajee/roskinectic_src/pulls) [![Gem Version](http://img.shields.io/gem/v/badgerbadgerbadger.svg?style=flat-square)](https://rubygems.org/gems/badgerbadgerbadger) [![Gitter](https://badges.gitter.im/iamrajee-ROS/community.svg)](https://gitter.im/iamrajee-ROS/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) [![Join our Slack Workspace](https://img.shields.io/badge/Slack%20Workspace-roboticsclubiitpkd.slack.com-blue.svg?logo=slack&longCache=true&style=flat)](https://roboticsclubiitpkd.slack.com) [![first-timers-only](https://img.shields.io/badge/first--timers--only-friendly-blue.svg)](https://www.firsttimersonly.com/)
 
 
-This ROS melodic workspace is created on Ubuntu 18.04.
+This ROS kinectic workspace is created on Ubuntu 18.04.
 <br/><br/>
 
 ## Table of content
-- [Maintainer](https://github.com/iamrajee/ws_moveit#maintainer)
-- [Installation](https://github.com/iamrajee/ws_moveit#installation)
-- [Package description](https://github.com/iamrajee/ws_moveit#package-description)
-- [Helper scripts](https://github.com/iamrajee/ws_moveit#helper-scripts)
-- [Team](https://github.com/iamrajee/ws_moveit#team)
-- [Contributing](https://github.com/iamrajee/ws_moveit#contributing)
-- [FAQ](https://github.com/iamrajee/ws_moveit#faq)
-- [Support](https://github.com/iamrajee/ws_moveit#support)
-- [License](https://github.com/iamrajee/ws_moveit#license)
-- [Acknowledgments](https://github.com/iamrajee/ws_moveit#acknowledgments)
+- [Maintainer](https://github.com/iamrajee/roskinectic_src#maintainer)
+- [Installation](https://github.com/iamrajee/roskinectic_src#installation)
+- [Package description](https://github.com/iamrajee/roskinectic_src#package-description)
+- [Helper scripts](https://github.com/iamrajee/roskinectic_src#helper-scripts)
+- [Team](https://github.com/iamrajee/roskinectic_src#team)
+- [Contributing](https://github.com/iamrajee/roskinectic_src#contributing)
+- [FAQ](https://github.com/iamrajee/roskinectic_src#faq)
+- [Support](https://github.com/iamrajee/roskinectic_src#support)
+- [License](https://github.com/iamrajee/roskinectic_src#license)
+- [Acknowledgments](https://github.com/iamrajee/roskinectic_src#acknowledgments)
 <!--- - [xyz](link) --->
 
 ---
@@ -33,18 +33,19 @@ This ROS melodic workspace is created on Ubuntu 18.04.
 
 > All the `code` required to get started
 - #### Prerequisite
-    - You should have ROS2 melodic on your ubuntu 18.04.
+    - You should have ROS2 kinectic on your ubuntu 18.04.
     - All ROS dependency is satisfied.
 
 - #### Clone
 
     ```
-    git clone https://github.com/iamrajee/ws_moveit.git
+    cd your_ros_workspace/
+    git clone https://github.com/iamrajee/roskinectic_src.git
     ```
 
 - #### Setup
     ```
-    cd ws_moveit/
+    cd your_ros_workspace/
     ./refresh.sh
     make
     ```
@@ -52,7 +53,7 @@ This ROS melodic workspace is created on Ubuntu 18.04.
 
 
 ## Package description
-* ## [panda](src/panda)
+* ## [test_pkg](test_pkg)
     panda pkg contain cpp and py interface for moveit.*
 
     Terminal 1:
@@ -65,9 +66,8 @@ This ROS melodic workspace is created on Ubuntu 18.04.
     $ TODO
     ```
 
-
-* ## [panda](src/panda)
-    ![RAWBOT 2.0](demogif/RAWBOT.gif)\
+* ## [manualcontrol_master](manualcontrol_master)
+    ![RAWBOT 2.0](https://github.com/iamrajee/roskinetic_catkin_ws/blob/master/demogif/RAWBOT.gif)\
     See full video [here](TODO).
     *In this pkg TODO*
 
@@ -75,11 +75,11 @@ This ROS melodic workspace is created on Ubuntu 18.04.
 ---
 <br/><br/>
 # Helper Scripts
-
+> To be run in your_ros_workspace for ease of build, compiling, running in your_ros_workspace.
 * ## refresh.sh
     ```
     #!/bin/bash
-    source /opt/ros/eloquent/setup.bash
+    source /opt/ros/kinectic/setup.bash
     source install/local_setup.bash
     source install/setup.bash
     clear
@@ -161,7 +161,7 @@ This ROS melodic workspace is created on Ubuntu 18.04.
     - 🍴 Fork this repo!
 
 - **Option 2**
-    - 👯 Clone this repo to your local machine using `https://github.com/iamrajee/ws_moveit.git`
+    - 👯 Clone this repo to your local machine using `https://github.com/iamrajee/roskinectic_src.git`
 
 ### Step 2
 
@@ -169,7 +169,7 @@ This ROS melodic workspace is created on Ubuntu 18.04.
 
 ### Step 3
 
-- 🔃 Create a new pull request using <a href="https://github.com/iamrajee/ws_moveit/compare/" target="_blank">`https://github.com/iamrajee/ws_moveit/compare/`</a>.
+- 🔃 Create a new pull request using <a href="https://github.com/iamrajee/roskinectic_src/compare/" target="_blank">`https://github.com/iamrajee/roskinectic_src/compare/`</a>.
 ---
 
 ## FAQ
@@ -190,7 +190,7 @@ Reach out to me at one of the following places!
 
 ## License
 
-[![MIT License](https://img.shields.io/github/license/iamrajee/ws_moveit.svg)](http://badges.mit-license.org)
+[![MIT License](https://img.shields.io/github/license/iamrajee/roskinectic_src.svg)](http://badges.mit-license.org)
 
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright (c) 2019 [Rajendra Singh](https://iamrajee.github.io/).
