@@ -21,14 +21,6 @@ This ROS kinectic workspace src folder, which was created on Ubuntu 16.04.
 
 ---
 
-## Maintainer
-|  |  |
-| :---: | --- |
-| ![](https://avatars0.githubusercontent.com/u/25712145?s=200&v=3) | Name : Rajendra Singh<br/> Email  : singh.raj1997@gmail.com<br/> Web    : https://iamrajee.github.io/<br/> LinkedIn    : https://www.linkedin.com/in/rajendra-singh-6b0b3a13a/ |
-|  |  |
-
----
-
 ## Installation
 
 > All the `code` required to get started
@@ -186,6 +178,14 @@ Reach out to me at one of the following places!
 - Twitter: <a href="https://twitter.com/i_am_rajee" target="_blank">`@i_am_rajee`</a>
 - Email  : singh.raj1997@gmail.com
 - LinkedIn: at <a href="https://www.linkedin.com/in/rajendra-singh-6b0b3a13a/" target="_blank">`@Rajendra Singh`</a>
+
+---
+## Maintainer
+|  |  |
+| :---: | --- |
+| ![](https://avatars0.githubusercontent.com/u/25712145?s=200&v=3) | Name : Rajendra Singh<br/> Email  : singh.raj1997@gmail.com<br/> Web    : https://iamrajee.github.io/<br/> LinkedIn    : https://www.linkedin.com/in/rajendra-singh-6b0b3a13a/<br/> Twitter: <a href="https://twitter.com/i_am_rajee" target="_blank">`@i_am_rajee`</a> |
+|  |  |
+
 ---
 
 ## License
