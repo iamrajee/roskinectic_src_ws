@@ -96,28 +96,26 @@ This ROS kinectic workspace src folder, which was created on Ubuntu 16.04. Here 
 * ## [sih](sih)
     ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/swarm_drone.gif)
     ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/swarm_crowd.gif)
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/pathplan.png)
 <!---    See full video [here](TODO).
     *In this pkg TODO* --->
-    
-* ## [drone_training](drone_training)
-    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/qlearn.png)
-    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/sarsa.png)
-    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/compare3.png)
 
 * ## [uarm](uarm)
-    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/uarm_write.gif)\
-    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/uarm_display.gif)\
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/uarm_write.gif)
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/uarm_display.gif)
 <!---    See full video [here](TODO).
     *In this pkg TODO* --->
     
 * ## [uarm4_moveit_config](uarm4_moveit_config)
     ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/uarm_pick.gif)\
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/uarm_moveit_config.png)
 <!---    See full video [here](TODO).
     *In this pkg TODO* --->
     
 * ## [panda](panda)
-    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/cylinder_detect.gif)\
-    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/pickplace.gif)\
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/cylinder.png)
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/cylinder_detect.gif)
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/pickplace.gif)
 <!---    See full video [here](TODO).
     *In this pkg TODO*--->
 <!---    
@@ -127,9 +125,16 @@ This ROS kinectic workspace src folder, which was created on Ubuntu 16.04. Here 
     *In this pkg TODO*
 --->
 * ## [gps](gps)
-    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/gps.gif)\
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/gps.gif)
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/tf.png)
 <!---    See full video [here](TODO).
     *In this pkg TODO*--->
+    
+* ## [drone_training](drone_training)
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/qlearn.png)
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/sarsa.png)
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/compare3.png)
+    
 <!---  
 * ## [drone_training](drone_training)
     ![](https://github.com/iamrajee/roskinetic_catkin_ws/blob/master/demogif/RAWBOT.gif)\
