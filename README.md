@@ -79,7 +79,7 @@ This ROS kinectic workspace src folder, which was created on Ubuntu 16.04.
 
 * ## [depthcamera](depthcamera)
     ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/agv.gif)\
-    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/ratslam.gif)\
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/rtabmap.gif)\
     ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/3d_map.gif)\
     See full video [here](TODO).
     *In this pkg TODO*
