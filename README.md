@@ -68,20 +68,20 @@ This ROS kinectic workspace src folder, which was created on Ubuntu 16.04. Here 
     ```
 --->
 * ## [depthcamera](depthcamera)
-    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/agv.gif)\
-    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/rtabmap.gif)\
-    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/3d_map.gif)\
-    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/rtabmap.png)\
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/agv.gif)
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/rtabmap.gif)
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/3d_map.gif)
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/rtabmap.png)
     
 * ## [manualcontrol_master](manualcontrol_master)
     ![RAWBOT 2.0](https://github.com/iamrajee/roskinetic_catkin_ws/blob/master/demogif/RAWBOT.gif)
-    ![RAWBOT 2.0](https://github.com/iamrajee/roskinetic_catkin_ws/blob/master/demogif/rawbot.png)
+    ![RAWBOT 2.0](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/rawbot.png)
 <!---    See full video [here](TODO).
     *In this pkg TODO* --->
     
 * ## [lidar](lidar)
-    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/gmapping_mapping.gif)\
-    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/gmapping_navigation.gif)\
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/gmapping_mapping.gif)
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/gmapping_navigation.gif)
 <!---    See full video [here](TODO).
     *In this pkg TODO* --->
 
