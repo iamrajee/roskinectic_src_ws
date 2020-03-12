@@ -53,6 +53,7 @@ This ROS kinectic workspace src folder, which was created on Ubuntu 16.04. Here 
 
 
 ## Package description
+<!---
 * ## [test_pkg](test_pkg)
     panda pkg contain cpp and py interface for moveit.*
 
@@ -65,6 +66,7 @@ This ROS kinectic workspace src folder, which was created on Ubuntu 16.04. Here 
     ```
     $ TODO
     ```
+--->
 
 * ## [manualcontrol_master](manualcontrol_master)
     ![RAWBOT 2.0](https://github.com/iamrajee/roskinetic_catkin_ws/blob/master/demogif/RAWBOT.gif)\
