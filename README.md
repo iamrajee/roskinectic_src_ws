@@ -4,7 +4,7 @@
 
 
 This ROS kinectic workspace src folder, which was created on Ubuntu 16.04. Here I worked on ROS1 projects like 2d & 3D SLAM, Motion Planning, SWARM of drone, RL based drone, Surveilling Robot etc.
-![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/robots.gif)
+![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/robots.png)
 <br/><br/>
 
 ## Table of content
