@@ -72,50 +72,60 @@ This ROS kinectic workspace src folder, which was created on Ubuntu 16.04.
     *In this pkg TODO*
     
 * ## [lidar](lidar)
-    ![RAWBOT 2.0](https://github.com/iamrajee/roskinetic_catkin_ws/blob/master/demogif/RAWBOT.gif)\
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/gmapping_mapping.gif)\
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/gmapping_navigation.gif)\
     See full video [here](TODO).
     *In this pkg TODO*
 
 * ## [depthcamera](depthcamera)
-    ![RAWBOT 2.0](https://github.com/iamrajee/roskinetic_catkin_ws/blob/master/demogif/RAWBOT.gif)\
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/agv.gif)\
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/ratslam.gif)\
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/3d_map.gif)\
+    See full video [here](TODO).
+    *In this pkg TODO*
+    
+* ## [ratslam_ros](ratslam_ros)
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/ratslam.gif)\
     See full video [here](TODO).
     *In this pkg TODO*
     
 * ## [sih](sih)
-    ![RAWBOT 2.0](https://github.com/iamrajee/roskinetic_catkin_ws/blob/master/demogif/RAWBOT.gif)\
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/swarm_drone.gif)\
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/swarm_crowd.gif)\
     See full video [here](TODO).
     *In this pkg TODO*
 
 * ## [uarm](uarm)
-    ![RAWBOT 2.0](https://github.com/iamrajee/roskinetic_catkin_ws/blob/master/demogif/RAWBOT.gif)\
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/uarm_write.gif)\
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/uarm_display.gif)\
     See full video [here](TODO).
     *In this pkg TODO*
     
 * ## [uarm4_moveit_config](uarm4_moveit_config)
-    ![RAWBOT 2.0](https://github.com/iamrajee/roskinetic_catkin_ws/blob/master/demogif/RAWBOT.gif)\
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/uarm_pick.gif)\
     See full video [here](TODO).
     *In this pkg TODO*
     
 * ## [panda](panda)
-    ![RAWBOT 2.0](https://github.com/iamrajee/roskinetic_catkin_ws/blob/master/demogif/RAWBOT.gif)\
-    See full video [here](TODO).
-    *In this pkg TODO*
-    
-* ## [panda_moveit_config](panda_moveit_config)
-    ![RAWBOT 2.0](https://github.com/iamrajee/roskinetic_catkin_ws/blob/master/demogif/RAWBOT.gif)\
-    See full video [here](TODO).
-    *In this pkg TODO*
-    
-* ## [gps](gps)
-    ![RAWBOT 2.0](https://github.com/iamrajee/roskinetic_catkin_ws/blob/master/demogif/RAWBOT.gif)\
-    See full video [here](TODO).
-    *In this pkg TODO*
-
-* ## [drone_training](drone_training)
-    ![RAWBOT 2.0](https://github.com/iamrajee/roskinetic_catkin_ws/blob/master/demogif/RAWBOT.gif)\
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/cylinder_detect.gif)\
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/pickplace.gif)\
     See full video [here](TODO).
     *In this pkg TODO*
 <!---    
+* ## [panda_moveit_config](panda_moveit_config)
+    ![](https://github.com/iamrajee/roskinetic_catkin_ws/blob/master/demogif/RAWBOT.gif)\
+    See full video [here](TODO).
+    *In this pkg TODO*
+--->
+* ## [gps](gps)
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/gps.gif)\
+    See full video [here](TODO).
+    *In this pkg TODO*
+<!---  
+* ## [drone_training](drone_training)
+    ![](https://github.com/iamrajee/roskinetic_catkin_ws/blob/master/demogif/RAWBOT.gif)\
+    See full video [here](TODO).
+    *In this pkg TODO*  
 * ## [drone_training](drone_training)
     ![RAWBOT 2.0](https://github.com/iamrajee/roskinetic_catkin_ws/blob/master/demogif/RAWBOT.gif)\
     See full video [here](TODO).
