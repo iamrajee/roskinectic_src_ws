@@ -94,10 +94,15 @@ This ROS kinectic workspace src folder, which was created on Ubuntu 16.04. Here 
     *In this pkg TODO* --->
     
 * ## [sih](sih)
-    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/swarm_drone.gif)\
-    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/swarm_crowd.gif)\
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/swarm_drone.gif)
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/swarm_crowd.gif)
 <!---    See full video [here](TODO).
     *In this pkg TODO* --->
+    
+* ## [drone_training](drone_training)
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/qlearn.png)
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/sarsa.png)
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/compare3.png)
 
 * ## [uarm](uarm)
     ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/uarm_write.gif)\
