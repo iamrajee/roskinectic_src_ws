@@ -70,7 +70,61 @@ This ROS kinectic workspace src folder, which was created on Ubuntu 16.04.
     ![RAWBOT 2.0](https://github.com/iamrajee/roskinetic_catkin_ws/blob/master/demogif/RAWBOT.gif)\
     See full video [here](TODO).
     *In this pkg TODO*
+    
+* ## [lidar](lidar)
+    ![RAWBOT 2.0](https://github.com/iamrajee/roskinetic_catkin_ws/blob/master/demogif/RAWBOT.gif)\
+    See full video [here](TODO).
+    *In this pkg TODO*
 
+* ## [depthcamera](depthcamera)
+    ![RAWBOT 2.0](https://github.com/iamrajee/roskinetic_catkin_ws/blob/master/demogif/RAWBOT.gif)\
+    See full video [here](TODO).
+    *In this pkg TODO*
+    
+* ## [sih](sih)
+    ![RAWBOT 2.0](https://github.com/iamrajee/roskinetic_catkin_ws/blob/master/demogif/RAWBOT.gif)\
+    See full video [here](TODO).
+    *In this pkg TODO*
+
+* ## [uarm](uarm)
+    ![RAWBOT 2.0](https://github.com/iamrajee/roskinetic_catkin_ws/blob/master/demogif/RAWBOT.gif)\
+    See full video [here](TODO).
+    *In this pkg TODO*
+    
+* ## [uarm4_moveit_config](uarm4_moveit_config)
+    ![RAWBOT 2.0](https://github.com/iamrajee/roskinetic_catkin_ws/blob/master/demogif/RAWBOT.gif)\
+    See full video [here](TODO).
+    *In this pkg TODO*
+    
+* ## [panda](panda)
+    ![RAWBOT 2.0](https://github.com/iamrajee/roskinetic_catkin_ws/blob/master/demogif/RAWBOT.gif)\
+    See full video [here](TODO).
+    *In this pkg TODO*
+    
+* ## [panda_moveit_config](panda_moveit_config)
+    ![RAWBOT 2.0](https://github.com/iamrajee/roskinetic_catkin_ws/blob/master/demogif/RAWBOT.gif)\
+    See full video [here](TODO).
+    *In this pkg TODO*
+    
+* ## [gps](gps)
+    ![RAWBOT 2.0](https://github.com/iamrajee/roskinetic_catkin_ws/blob/master/demogif/RAWBOT.gif)\
+    See full video [here](TODO).
+    *In this pkg TODO*
+
+* ## [drone_training](drone_training)
+    ![RAWBOT 2.0](https://github.com/iamrajee/roskinetic_catkin_ws/blob/master/demogif/RAWBOT.gif)\
+    See full video [here](TODO).
+    *In this pkg TODO*
+<!---    
+* ## [drone_training](drone_training)
+    ![RAWBOT 2.0](https://github.com/iamrajee/roskinetic_catkin_ws/blob/master/demogif/RAWBOT.gif)\
+    See full video [here](TODO).
+    *In this pkg TODO*    
+* ## [drone_training](drone_training)
+    ![RAWBOT 2.0](https://github.com/iamrajee/roskinetic_catkin_ws/blob/master/demogif/RAWBOT.gif)\
+    See full video [here](TODO).
+    *In this pkg TODO*
+--->
 
 ---
 <br/><br/>
