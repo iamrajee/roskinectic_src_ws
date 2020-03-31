@@ -94,7 +94,7 @@ This ROS kinectic workspace src folder, which was created on Ubuntu 16.04. Here 
     *In this pkg TODO* --->
     
 * ## [ratslam_ros](ratslam_ros)
-    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/ratslam.gif)\
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/ratslam.gif)
 <!---    See full video [here](TODO).
     *In this pkg TODO* --->
     
@@ -112,7 +112,7 @@ This ROS kinectic workspace src folder, which was created on Ubuntu 16.04. Here 
     *In this pkg TODO* --->
     
 * ## [uarm4_moveit_config](uarm4_moveit_config)
-    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/uarm_pick.gif)\
+    ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/uarm_pick.gif)
     ![](https://github.com/iamrajee/resume/blob/master/category_wise_gif/ROS1_Kinetic_src/uarm_moveit_config.png)
 <!---    See full video [here](TODO).
     *In this pkg TODO* --->
