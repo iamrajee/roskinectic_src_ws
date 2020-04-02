@@ -11,7 +11,6 @@ This ROS kinectic workspace src folder, which was created on Ubuntu 16.04. Here 
 <br/><br/>
 
 ## Table of content
-- [Maintainer](https://github.com/iamrajee/roskinectic_src#maintainer)
 - [Installation](https://github.com/iamrajee/roskinectic_src#installation)
 - [Package description](https://github.com/iamrajee/roskinectic_src#package-description)
 - [Helper scripts](https://github.com/iamrajee/roskinectic_src#helper-scripts)
@@ -23,13 +22,14 @@ This ROS kinectic workspace src folder, which was created on Ubuntu 16.04. Here 
 - [Acknowledgments](https://github.com/iamrajee/roskinectic_src#acknowledgments)
 <!--- - [xyz](link) --->
 
+<!---
 ---
-
 ## Maintainer
 |  |  |
 | :---: | --- |
 | ![](https://avatars0.githubusercontent.com/u/25712145?s=200&v=3) | Name : Rajendra Singh<br/> Email  : singh.raj1997@gmail.com<br/> Web    : https://iamrajee.github.io/<br/> LinkedIn    : https://www.linkedin.com/in/rajendra-singh-6b0b3a13a/<br/> Twitter: <a href="https://twitter.com/i_am_rajee" target="_blank">`@i_am_rajee`</a> |
 |  |  |
+--->
 
 ---
 
@@ -265,12 +265,10 @@ This ROS kinectic workspace src folder, which was created on Ubuntu 16.04. Here 
 ---
 
 ## Support
-Reach out to me at one of the following places!
-
-- Website: <a href="https://iamrajee.github.io/" target="_blank">`iamrajee.github.io/`</a>
-- Twitter: <a href="https://twitter.com/i_am_rajee" target="_blank">`@i_am_rajee`</a>
-- Email  : singh.raj1997@gmail.com
-- LinkedIn: at <a href="https://www.linkedin.com/in/rajendra-singh-6b0b3a13a/" target="_blank">`@Rajendra Singh`</a>
+|  |  |
+| :---: | --- |
+| ![](https://avatars0.githubusercontent.com/u/25712145?s=200&v=3) | Name : Rajendra Singh<br/> Email  : singh.raj1997@gmail.com<br/> Web    : https://iamrajee.github.io/<br/> LinkedIn    : https://www.linkedin.com/in/rajendra-singh-6b0b3a13a/<br/> Twitter: <a href="https://twitter.com/i_am_rajee" target="_blank">`@i_am_rajee`</a> |
+|  |  |
 
 ---
 
