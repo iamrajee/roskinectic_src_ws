@@ -43,9 +43,12 @@ This ROS kinectic workspace src folder, which was created on Ubuntu 16.04. Here 
 - #### Clone
 
     ```
+    mkdir your_ros_workspace/
     cd your_ros_workspace/
     git clone https://github.com/iamrajee/roskinectic_src.git
     mv roskinectic_src src      
+    catkin_make
+    source devel/setup.bash
     ```
 
 - #### Setup
