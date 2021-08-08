@@ -13,7 +13,8 @@
 
 #========== New Modified ============#
 
-github: [iamrajee]
+# github: [iamrajee] #Some users provided are not enrolled in GitHub Sponsors
+github: [octocat, surftocat]
 # patreon: octocat
 # tidelift: npm/octo-package
 custom: ["https://www.paypal.me/iamrajee"]
