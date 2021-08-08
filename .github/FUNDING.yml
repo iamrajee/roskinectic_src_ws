@@ -14,7 +14,8 @@
 #========== New Modified ============#
 
 # github: [iamrajee] #Some users provided are not enrolled in GitHub Sponsors
-github: [octocat, surftocat]
+# github: [octocat, surftocat]
+github: [Reakit] #Reakit
 patreon: iamrajee #https://www.patreon.com/iamrajee
 # tidelift: npm/octo-package
 custom: ["https://www.paypal.me/iamrajee"]
