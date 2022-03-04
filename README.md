@@ -233,7 +233,7 @@ This ROS kinectic workspace src folder, which was created on Ubuntu 16.04. Here 
 | :---: |:---:| :---:|
 | ![](https://avatars0.githubusercontent.com/u/18076234?s=200&v=3) | ![](https://avatars0.githubusercontent.com/u/2555224?s=200&v=3) | ![](https://avatars0.githubusercontent.com/u/917816?s=200&v=3)  |
 --->
-| <a href="https://github.com/MuskaanMaheshwari" target="_blank">**Muskaan Maheshwari**</a> | <a href="https://github.com/wildcat26" target="_blank">**Shruti Umat**</a> | <a href="https://www.linkedin.com/in/amin-swamiprasad-pkd-17732b152/" target="_blank">**Swami Prasad**</a> |
+| <a href="https://github.com/MuskaanMaheshwari" target="_blank">**Muskaan Maheshwari**</a> | <a href="https://github.com/wildcat26" target="_blank">**Shruti Umat**</a> | <a href="https://github.com/AminS1" target="_blank">**Swami Prasad**</a> |
 | :---: |:---:| :---:|
 | ![](https://avatars0.githubusercontent.com/u/18076234?s=200&v=3) | ![](https://avatars0.githubusercontent.com/u/37037236?s=200&v=3) | ![](https://avatars0.githubusercontent.com/u/917816?s=200&v=3)  |
 
